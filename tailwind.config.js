@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extends: {
+    extend: {
       colors: {
         "black-900": "#171717",
         "black-800": "#2E2E2E",
@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         Roboto: ["Roboto"],
+        Balsamiq: ["Balsamiq Sans"],
       },
     },
   },
