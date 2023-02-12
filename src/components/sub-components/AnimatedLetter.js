@@ -32,7 +32,7 @@ export default function AnimatedLetter({ text }) {
   };
 
   return (
-    <motion.div
+    <motion.span
       variants={containerVarient}
       whileInView="animate"
       initial="initial"
@@ -43,6 +43,6 @@ export default function AnimatedLetter({ text }) {
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.span>
   );
 }

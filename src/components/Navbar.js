@@ -6,7 +6,7 @@ export default function Navbar() {
       id: 1,
       name: "Home",
       link: "home",
-      offset: 0,
+      offset: -60,
     },
     {
       id: 2,
@@ -33,7 +33,6 @@ export default function Navbar() {
       offset: 0,
     },
   ];
-  // const [activeId, setActiveId] = useState(itemList[0].id);
 
   return (
     <nav className="sticky top-0 right-0 z-10 border-b border-black-700 backdrop-blur-md backdrop-filter">

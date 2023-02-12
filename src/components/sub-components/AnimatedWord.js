@@ -30,7 +30,7 @@ export default function AnimatedTextWord({ text }) {
   };
 
   return (
-    <motion.div
+    <motion.span
       variants={containerVarient}
       initial="initial"
       whileInView="animate"
@@ -41,6 +41,6 @@ export default function AnimatedTextWord({ text }) {
           {word}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.span>
   );
 }
