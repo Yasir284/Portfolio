@@ -1,5 +1,14 @@
-import React from "react";
+import { useState } from "react";
+
+// Components and helpers
+import projects from "../helpers/projects";
 
 export default function Projects() {
-  return <section id="projects">Projects</section>;
+  const [category, setCategory] = useState("JavaScript");
+
+  return (
+    <section id="projects" className="min-h-screen">
+      <div></div>
+    </section>
+  );
 }
