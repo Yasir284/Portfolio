@@ -1,6 +1,12 @@
-import myImage from "../assets/images/my-image.png";
-import AnimatedWord from "./sub-components/AnimatedWord";
+// Dependencies
 import { motion } from "framer-motion";
+
+// Components and helpers
+import qualifications from "../helpers/qualification";
+import AnimatedWord from "./sub-components/AnimatedWord";
+
+// Images
+import myImage from "../assets/images/my-image.png";
 
 // Framer motion animation varients
 const imageVaritent = {
@@ -15,32 +21,11 @@ const imageVaritent = {
     },
   },
 };
+
 const containerVarient = {
   initial: { opacity: 0, x: -30 },
   whileInView: { opacity: 1, x: 0, transition: { duration: 1.5 } },
 };
-
-// Array of objects
-const qualifications = [
-  {
-    qualification: "Bachelor of engineering",
-    year: "June 2022",
-    description:
-      "I have completed my Btech in mechanical engineering at Gujarat Technological University, from S.V.I.T, Vasad.",
-  },
-  {
-    qualification: "Higher Secondary Education",
-    year: "March 2018",
-    description:
-      "I have completed my higher secondary education from Baroda public school, Vadadora.",
-  },
-  {
-    qualification: "Secondary Education",
-    year: "March 2016",
-    description:
-      "I have completed my secondary education from Zenith high school, Vadadora.",
-  },
-];
 
 export default function About() {
   return (

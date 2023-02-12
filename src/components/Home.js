@@ -1,10 +1,14 @@
+// Dependencies
 import { motion } from "framer-motion";
 
+// Images
 import mainImage from "../assets/images/header-img.svg";
 // import waves from "../assets/layered-waves.svg";
 // import mountain from "../assets/mountain.svg";
 // import moon from "../assets/Moon.svg";
 // import star from "../assets/star.svg";
+
+// Components
 import AnimatedLetter from "./sub-components/AnimatedLetter";
 import AnimatedWord from "./sub-components/AnimatedWord";
 
