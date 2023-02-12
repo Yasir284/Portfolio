@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function AnimatedTextWord({ text }) {
+export default function AnimatedWord({ text }) {
   const words = text.split(" ");
 
   const containerVarient = {
