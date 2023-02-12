@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import mainImage from "../assets/header-img.svg";
+import mainImage from "../assets/images/header-img.svg";
 // import waves from "../assets/layered-waves.svg";
 // import mountain from "../assets/mountain.svg";
 // import moon from "../assets/Moon.svg";

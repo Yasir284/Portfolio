@@ -18,13 +18,13 @@ export default function Navbar() {
       id: 3,
       name: "Skills",
       link: "skills",
-      offset: 0,
+      offset: -60,
     },
     {
       id: 4,
       name: "Projects",
       link: "projects",
-      offset: 0,
+      offset: -60,
     },
     {
       id: 5,

@@ -29,10 +29,10 @@ const qualifications = [
       "I have completed my Btech in mechanical engineering at Gujarat Technological University, from S.V.I.T, Vasad.",
   },
   {
-    qualification: " Higher Secondary Education",
+    qualification: "Higher Secondary Education",
     year: "March 2018",
     description:
-      " I have completed my higher secondary education from Baroda public school, Vadadora.",
+      "I have completed my higher secondary education from Baroda public school, Vadadora.",
   },
   {
     qualification: "Secondary Education",
@@ -50,7 +50,7 @@ export default function About() {
           {...imageVaritent}
           className="mx-auto h-64 w-48 overflow-hidden rounded-3xl bg-black-800 shadow-lg shadow-black-800"
         >
-          <img src={myImage} className="" alt="Yasir" />
+          <motion.img src={myImage} className="" alt="Yasir" />
         </motion.div>
 
         {/* About me */}
