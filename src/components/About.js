@@ -41,7 +41,7 @@ export default function About() {
         {/* About me */}
         <motion.div className="basis-2/3">
           <div>
-            <h2 className="mb-4 border-b border-black-700 font-Balsamiq text-3xl font-extrabold">
+            <h2 className="mb-4 border-b border-black-700 text-3xl font-extrabold">
               <AnimatedWord text={"About me"} />
             </h2>
             <p>
