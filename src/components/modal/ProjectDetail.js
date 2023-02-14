@@ -11,15 +11,15 @@ import shapes from "../../assets/images/backgrounds/shapes.svg";
 const modalVarient = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
-  exit: { opactiy: 0 },
 };
 
 export default function ProjectDetail({ project, active, setActiveModal }) {
   return (
     <AnimatePresence>
-      {project && (
+      {active && (
         <motion.div
           {...modalVarient}
+          exit={{ opacity: 0 }}
           key={active}
           className="fixed top-0 right-0 z-20 flex h-full w-full flex-row items-center justify-center bg-black bg-opacity-20 backdrop-blur-sm backdrop-filter"
         >

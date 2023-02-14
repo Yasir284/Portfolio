@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-export default function AnimatedWord({ text }) {
-  const words = text.split(" ");
+export default function AnimatedWord({ text, onceTrue }) {
+  const words = text?.split(" ");
 
   const containerVarient = {
     initial: {
@@ -31,12 +31,13 @@ export default function AnimatedWord({ text }) {
 
   return (
     <motion.span
+      viewport={{ once: onceTrue === true ? true : false }}
       variants={containerVarient}
       initial="initial"
       whileInView="animate"
       className="flex flex-wrap"
     >
-      {words.map((word, index) => (
+      {words?.map((word, index) => (
         <motion.span variants={childVarient} key={index} className="mr-3">
           {word}
         </motion.span>

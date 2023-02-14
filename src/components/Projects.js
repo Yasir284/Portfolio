@@ -2,16 +2,33 @@ import { useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
 import { motion } from "framer-motion";
 
+// Images
+import shapes from "../assets/images/backgrounds/shapes.svg";
+
 // Components and helpers
 import projects from "../helpers/projects";
 import AnimatedWord from "./sub-components/AnimatedWord";
 import ProjectDetail from "./modal/ProjectDetail";
 
-const cardAnimation = {
+const cardVarient = {
   initial: { opacity: 0, x: -30 },
   whileInView: { opacity: 1, x: 0 },
   whileHover: { y: -20 },
-  transition: { type: "spring", stiffness: 100, damping: 12, duration: 1 },
+  transition: {
+    type: "spring",
+    stiffness: 100,
+    damping: 12,
+    duration: 1,
+    opacity: { delay: 0.2 },
+    x: { delay: 0.2 },
+  },
+};
+
+const textVarient = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true },
+  transition: { delay: 0.35 },
 };
 
 export default function Projects() {
@@ -61,7 +78,7 @@ export default function Projects() {
   const [category, setCategory] = useState("Javascript");
   const [acitveId, setActiveId] = useState(itemList[2].id);
   const [activeModal, setActiveModal] = useState({
-    active: true,
+    active: false,
     project: "",
   });
 
@@ -90,16 +107,22 @@ export default function Projects() {
           ))}
         </ul>
 
-        <div className="mt-4 flex h-[60vh] flex-row flex-wrap justify-center gap-6 overflow-y-auto py-12">
+        <div
+          className="myScrollbar mx-auto mt-4 flex h-[68vh] w-[86vw] flex-row flex-wrap justify-center gap-y-28 gap-x-8 overflow-y-scroll rounded-md pb-12 pt-20 shadow-xl shadow-black"
+          style={{ backgroundImage: `url(${shapes})` }}
+        >
           {projects
             .filter((e) => e.category === category)
+            .reverse()
             .map((project, index) => (
               <motion.div
-                {...cardAnimation}
-                key={index}
-                className="group relative flex flex-col items-center gap-2 rounded-md bg-black pb-10 active:scale-90"
+                viewport={{ once: true }}
+                {...cardVarient}
+                layoutId={index}
+                layout
+                className="group relative flex flex-col items-center justify-between gap-2 rounded-md bg-black-900 pb-10 shadow-lg shadow-black active:scale-90"
               >
-                <div className="flex aspect-video w-96 items-center justify-center rounded-md bg-black">
+                <div className="flex aspect-video w-96 items-center justify-center rounded-md border border-black-700 bg-black-900">
                   <img
                     className="rounded-md object-cover"
                     src={project.images[0]}
@@ -107,13 +130,16 @@ export default function Projects() {
                   />
                 </div>
 
-                <h2 className="mx-auto w-fit border-b border-black-700 text-2xl font-bold">
-                  <AnimatedWord text={project.name} />
-                </h2>
+                <motion.h2
+                  {...textVarient}
+                  className="mx-auto w-fit border-b border-black-700 text-2xl font-bold"
+                >
+                  {project.name}
+                </motion.h2>
 
                 <div
                   onClick={() => setActiveModal({ active: true, project })}
-                  className="absolute top-0 right-0 flex h-full w-full items-center justify-center rounded-md bg-gradient-to-br from-[rgba(182,128,197,0.2)] to-[rgba(104,88,154,0.2)] opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
+                  className="absolute top-0 right-0 flex h-full w-full items-center justify-center rounded-md bg-black bg-opacity-25 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
                 >
                   <BsPlusLg size="2rem" />
                 </div>
@@ -122,13 +148,11 @@ export default function Projects() {
         </div>
       </div>
 
-      {activeModal.active && (
-        <ProjectDetail
-          active={activeModal.active}
-          project={activeModal.project}
-          setActiveModal={setActiveModal}
-        />
-      )}
+      <ProjectDetail
+        active={activeModal.active}
+        project={activeModal.project}
+        setActiveModal={setActiveModal}
+      />
     </section>
   );
 }

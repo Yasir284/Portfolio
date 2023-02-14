@@ -268,16 +268,6 @@ const projects = [
   {
     id: 19,
     category: "Javascript",
-    name: "Calculator App",
-    images: [jsCalculator],
-    liveLink: "https://javascript-calculatorapp-project1.netlify.app/",
-    githubLink: "https://github.com/Yasir284/JavaScript_Calculator_App",
-    description:
-      "This is Javascript Project. In this project I have made a Calculator App with JavasCript, which performes addition, multiplicaption, division and subtraction by BODMAS rule. You can also use keybord for calculation. It took me 10-12 hrs to make this project.",
-  },
-  {
-    id: 20,
-    category: "Javascript",
     name: "Word Count App",
     images: [jsWordCounter],
     liveLink: "https://javascript-wordcount-project3.netlify.app/",
@@ -286,27 +276,7 @@ const projects = [
       "This is Javascript Project. In this project I have made a Word Count App with JavasCript, which counts the words and characters you type in the textarea, you can also add a .txt file to check its word and character count. It took me 3-4 hrs to make this project.",
   },
   {
-    id: 21,
-    category: "Javascript",
-    name: "Stop Watch App",
-    images: [jsStopWatch],
-    liveLink: "https://javascript-stopwatch-project2.netlify.app/",
-    githubLink: "https://github.com/Yasir284/JavaScript_Stopwatch_App",
-    description:
-      "This is Javascript Project. In this project I have made a Stop Watch App with JavasCript, which starts, stops and reset the timer. It took me 3-4 hrs to make this project.",
-  },
-  {
-    id: 22,
-    category: "Javascript",
-    name: "Music Player App",
-    images: [jsMusicPlayer],
-    liveLink: "https://javascript-musicplayer-project5.netlify.app/",
-    githubLink: "https://github.com/Yasir284/JavaScript_Music_Player_App",
-    description:
-      "This is Javascript Project. In this project I have made a Music Player App with JavaSript, which has some features like play, pause, volume-up, volume-down, Previous and next button. It took me 10-12 hrs to make this project.",
-  },
-  {
-    id: 23,
+    id: 20,
     category: "Javascript",
     name: "Palindrome Checker",
     images: [jsPalindromeChecker],
@@ -316,7 +286,7 @@ const projects = [
       "This is Javascript Project. In this project I have made a Palindrome Checker with JavaSript, which checks wether the text or number is palindrome or not. It took me 4-5 hrs to make this project.",
   },
   {
-    id: 24,
+    id: 21,
     category: "Javascript",
     name: "Theme Changer",
     images: [jsThemeChanger],
@@ -326,7 +296,7 @@ const projects = [
       "This is Javascript Project. In this project I have made a Theme Changer with JavaSript, in which you can change the theme of the site.I have added two themes : Dark and Light. It took me 1 hr to make this project.",
   },
   {
-    id: 25,
+    id: 22,
     category: "Javascript",
     name: "To Do App",
     images: [jsTodoApp],
@@ -334,6 +304,36 @@ const projects = [
     githubLink: "https://github.com/Yasir284/JavaScript_To_Do_App",
     description:
       "This is Javascript Project. In this project I have made a To Do App with JavasCript, which adds and removes your daily tasks. It took me 3-4 hrs to make this project.",
+  },
+  {
+    id: 23,
+    category: "Javascript",
+    name: "Stop Watch App",
+    images: [jsStopWatch],
+    liveLink: "https://javascript-stopwatch-project2.netlify.app/",
+    githubLink: "https://github.com/Yasir284/JavaScript_Stopwatch_App",
+    description:
+      "This is Javascript Project. In this project I have made a Stop Watch App with JavasCript, which starts, stops and reset the timer. It took me 3-4 hrs to make this project.",
+  },
+  {
+    id: 24,
+    category: "Javascript",
+    name: "Music Player App",
+    images: [jsMusicPlayer],
+    liveLink: "https://javascript-musicplayer-project5.netlify.app/",
+    githubLink: "https://github.com/Yasir284/JavaScript_Music_Player_App",
+    description:
+      "This is Javascript Project. In this project I have made a Music Player App with JavaSript, which has some features like play, pause, volume-up, volume-down, Previous and next button. It took me 10-12 hrs to make this project.",
+  },
+  {
+    id: 25,
+    category: "Javascript",
+    name: "Calculator App",
+    images: [jsCalculator],
+    liveLink: "https://javascript-calculatorapp-project1.netlify.app/",
+    githubLink: "https://github.com/Yasir284/JavaScript_Calculator_App",
+    description:
+      "This is Javascript Project. In this project I have made a Calculator App with JavasCript, which performes addition, multiplicaption, division and subtraction by BODMAS rule. You can also use keybord for calculation. It took me 10-12 hrs to make this project.",
   },
   {
     id: 26,

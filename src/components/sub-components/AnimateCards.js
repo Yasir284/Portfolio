@@ -23,7 +23,7 @@ export default function AnimateCards({ index, children, className }) {
           delay: 0.2 * index,
         },
       }}
-      layoutId={index}
+      key={index}
       className={className}
     >
       {children}

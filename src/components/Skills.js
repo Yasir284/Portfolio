@@ -30,19 +30,21 @@ export default function Skills() {
 
         <motion.div className="flex flex-row flex-wrap justify-start gap-10">
           {skills.map((skill, index) => (
-            <AnimateCards
-              index={index}
-              className="flex w-48 flex-col items-center justify-center rounded-lg bg-black-900 p-10 uppercase shadow-md shadow-black-800"
-            >
-              <h2 className="text-xl font-bold">{skill.name}</h2>
-              <div className="w-32">
-                <img
-                  className="object-cover"
-                  src={skill.src}
-                  alt={skill.name + " image"}
-                />
-              </div>
-            </AnimateCards>
+            <div key={index}>
+              <AnimateCards
+                index={index}
+                className="flex w-48 flex-col items-center justify-center rounded-lg bg-black-900 p-10 uppercase shadow-lg shadow-black"
+              >
+                <h2 className="text-xl font-bold">{skill.name}</h2>
+                <div className="w-32">
+                  <img
+                    className="object-cover"
+                    src={skill.src}
+                    alt={skill.name + " image"}
+                  />
+                </div>
+              </AnimateCards>
+            </div>
           ))}
         </motion.div>
       </div>
