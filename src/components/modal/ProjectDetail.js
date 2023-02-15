@@ -28,12 +28,12 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
             style={{ backgroundImage: `url(${shapes})` }}
           >
             {/* Close button */}
-            <div
+            <button
               onClick={() => setActiveModal({ active: false, project: "" })}
               className="absolute top-4 right-4 active:scale-90"
             >
               <AiFillCloseCircle size="2rem" />
-            </div>
+            </button>
 
             <div className="flex flex-row gap-6">
               <div>
@@ -52,15 +52,6 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                 {/* Links */}
                 <div className="flex flex-row gap-4">
                   <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex w-fit flex-row items-center gap-3 rounded-md bg-white bg-opacity-20 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
-                  >
-                    <AiFillGithub size="1.5rem" className="text-violet-500" />
-                    <p>Github Link</p>
-                  </a>
-                  <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noreferrer"
@@ -68,6 +59,15 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                   >
                     <AiFillPlayCircle size="1.5rem" className="text-red-500" />
                     <p>Live Link</p>
+                  </a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex w-fit flex-row items-center gap-3 rounded-md bg-white bg-opacity-20 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
+                  >
+                    <AiFillGithub size="1.5rem" className="text-violet-500" />
+                    <p>Github Link</p>
                   </a>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsPlusLg } from "react-icons/bs";
+import { GiClick } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 // Images
@@ -95,7 +95,7 @@ export default function Projects() {
     >
       <div>
         <h2 className="mx-auto w-fit font-Balsamiq text-4xl font-extrabold">
-          <AnimatedWord text={"Projects"} />
+          <AnimatedWord text={"Projects"} viewOnce={true} />
         </h2>
         <hr className="mb-4 border-black-700" />
 
@@ -107,7 +107,7 @@ export default function Projects() {
               key={index}
               className={`w-36 cursor-pointer rounded-md py-2 px-4 text-center font-bold uppercase transition-all duration-200 ease-in-out active:scale-90 ${
                 acitveId === list.id
-                  ? "bg-gradient-to-br from-[#b680c5] to-[#69589a] shadow-inner shadow-black-700"
+                  ? "bg-white text-black shadow-inner shadow-black-700"
                   : "backdrop-blur-sm backdrop-filter"
               }`}
             >
@@ -124,6 +124,7 @@ export default function Projects() {
               <motion.div
                 viewport={{ once: true }}
                 {...cardVarient}
+                key={project.id}
                 layoutId={index}
                 layout
                 className="group relative flex flex-col items-center justify-between gap-2 rounded-md bg-black-900 pb-10 shadow-lg shadow-black active:scale-90"
@@ -145,9 +146,10 @@ export default function Projects() {
 
                 <div
                   onClick={() => setActiveModal({ active: true, project })}
-                  className="absolute top-0 right-0 flex h-full w-full items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
+                  className="absolute top-0 right-0 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
                 >
-                  <BsPlusLg size="2rem" />
+                  <p className="text-xl font-bold">Click to know more</p>
+                  <GiClick size="2rem" className="animate-ping" />
                 </div>
               </motion.div>
             ))}

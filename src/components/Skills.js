@@ -14,14 +14,15 @@ export default function Skills() {
     <section id="skills" className="min-h-screen">
       <div className="mx-auto w-[80%] py-10">
         <h2 className="mx-auto w-fit text-4xl font-extrabold">
-          <AnimatedWord text="Skills" />
+          <AnimatedWord text="Skills" viewOnce={true} />
         </h2>
         <hr className="mb-4 border-black-700" />
 
-        <motion.div className="flex flex-row flex-wrap justify-start gap-10">
+        <motion.div className="flex flex-row flex-wrap items-end justify-start gap-10">
           {skills.map((skill, index) => (
             <div key={index}>
               <AnimateCards
+                viewOnce={true}
                 index={index}
                 className="flex w-48 flex-col items-center justify-center rounded-lg bg-gradient-to-br from-[#603f71] to-[#863d61] p-10 uppercase shadow-lg shadow-black"
               >
@@ -36,12 +37,12 @@ export default function Skills() {
               </AnimateCards>
             </div>
           ))}
+
+          <h2 className="w-fit pb-4 text-2xl">
+            <AnimatedLetter text={"More coming soon..."} viewOnce={true} />
+          </h2>
         </motion.div>
       </div>
-
-      <h2 className="mx-auto w-fit pb-4 text-2xl">
-        <AnimatedLetter text={"More coming soon..."} />
-      </h2>
     </section>
   );
 }

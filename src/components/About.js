@@ -32,6 +32,7 @@ export default function About() {
   return (
     <motion.section
       {...containerVarient}
+      viewport={{ once: true }}
       id="about"
       style={{
         backgroundImage: `url(${shapes})`,
@@ -52,7 +53,7 @@ export default function About() {
         <motion.div className="basis-2/3">
           <div>
             <h2 className="mb-4 border-b border-black-700 text-4xl font-extrabold">
-              <AnimatedWord text={"About me"} />
+              <AnimatedWord text={"About me"} viewOnce={true} />
             </h2>
             <p>
               <AnimatedWord
@@ -60,8 +61,9 @@ export default function About() {
             I am Yasir Lambawala, born and brought up in Vadodara, Gujarat. I am
             a fullstack Javascript developer with proficiency in frontend and
             now I am exploring the backend. I and got interested in web development while pursuing
-            Btech. I love to watch Marvel & DC movies and Anime.
+            Btech. I love to watch Sci-Fi movies and Anime.
             "
+                viewOnce={true}
               />
             </p>
           </div>

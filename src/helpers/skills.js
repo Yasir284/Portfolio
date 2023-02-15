@@ -11,33 +11,41 @@ const skills = [
   {
     name: "Html",
     src: html,
+    bgColor: "from-orange-600",
   },
   {
     name: "Css",
     src: css,
+    bgColor: "from-blue-600",
   },
   {
     name: "JavaScript",
     src: javascript,
+    bgColor: "from-violet-600",
   },
   {
     name: "React",
     src: react,
+    bgColor: "from-orange-600",
   },
   {
     name: "NodeJS",
+    bgColor: "from-orange-600",
     src: nodejs,
   },
   {
     name: "Express",
+    bgColor: "from-orange-600",
     src: express,
   },
   {
     name: "MongoDB",
+    bgColor: "from-orange-600",
     src: mongodb,
   },
   {
     name: "Appwrite",
+    bgColor: "from-orange-600",
     src: appwrite,
   },
 ];

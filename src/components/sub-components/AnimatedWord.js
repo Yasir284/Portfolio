@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function AnimatedWord({ text, onceTrue }) {
+export default function AnimatedWord({ text, viewOnce }) {
   const words = text?.split(" ");
 
   const containerVarient = {
@@ -31,7 +31,7 @@ export default function AnimatedWord({ text, onceTrue }) {
 
   return (
     <motion.span
-      viewport={{ once: onceTrue === true ? true : false }}
+      viewport={{ once: viewOnce === true ? true : false }}
       variants={containerVarient}
       initial="initial"
       whileInView="animate"
