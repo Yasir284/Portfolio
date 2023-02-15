@@ -6,24 +6,14 @@ import AnimatedWord from "./sub-components/AnimatedWord";
 import skills from "../helpers/skills";
 
 // Images
-import shapes from "../assets/images/backgrounds/shapes.svg";
 import AnimatedLetter from "./sub-components/AnimatedLetter";
 import AnimateCards from "./sub-components/AnimateCards";
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="min-h-screen"
-      style={{
-        background: `url(${shapes})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <section id="skills" className="min-h-screen">
       <div className="mx-auto w-[80%] py-10">
-        <h2 className="mx-auto w-fit text-3xl font-extrabold">
+        <h2 className="mx-auto w-fit text-4xl font-extrabold">
           <AnimatedWord text="Skills" />
         </h2>
         <hr className="mb-4 border-black-700" />
@@ -33,7 +23,7 @@ export default function Skills() {
             <div key={index}>
               <AnimateCards
                 index={index}
-                className="flex w-48 flex-col items-center justify-center rounded-lg bg-black-900 p-10 uppercase shadow-lg shadow-black"
+                className="flex w-48 flex-col items-center justify-center rounded-lg bg-gradient-to-br from-[#603f71] to-[#863d61] p-10 uppercase shadow-lg shadow-black"
               >
                 <h2 className="text-xl font-bold">{skill.name}</h2>
                 <div className="w-32">

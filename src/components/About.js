@@ -6,6 +6,7 @@ import qualifications from "../helpers/qualification";
 import AnimatedWord from "./sub-components/AnimatedWord";
 
 // Images
+import shapes from "../assets/images/backgrounds/shapes.svg";
 import myImage from "../assets/images/my-image.png";
 
 // Framer motion animation varients
@@ -29,19 +30,28 @@ const containerVarient = {
 
 export default function About() {
   return (
-    <motion.section {...containerVarient} id="about" className="mt-20">
-      <div className="flex h-[100vh] flex-row justify-between gap-8 p-12">
+    <motion.section
+      {...containerVarient}
+      id="about"
+      style={{
+        backgroundImage: `url(${shapes})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="flex flex-row justify-between gap-8 p-12">
         <motion.div
           {...imageVaritent}
           className="mx-auto h-64 w-48 overflow-hidden rounded-3xl bg-black-800 shadow-lg shadow-black-800"
         >
-          <motion.img src={myImage} className="" alt="Yasir" />
+          <motion.img src={myImage} alt="Yasir" />
         </motion.div>
 
         {/* About me */}
         <motion.div className="basis-2/3">
           <div>
-            <h2 className="mb-4 border-b border-black-700 text-3xl font-extrabold">
+            <h2 className="mb-4 border-b border-black-700 text-4xl font-extrabold">
               <AnimatedWord text={"About me"} />
             </h2>
             <p>

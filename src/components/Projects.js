@@ -83,9 +83,18 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="min-h-screen py-10">
+    <section
+      id="projects"
+      className="py-10"
+      style={{
+        backgroundImage: `url(${shapes})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div>
-        <h2 className="mx-auto w-fit font-Balsamiq text-3xl font-extrabold">
+        <h2 className="mx-auto w-fit font-Balsamiq text-4xl font-extrabold">
           <AnimatedWord text={"Projects"} />
         </h2>
         <hr className="mb-4 border-black-700" />
@@ -107,10 +116,7 @@ export default function Projects() {
           ))}
         </ul>
 
-        <div
-          className="myScrollbar mx-auto mt-4 flex h-[68vh] w-[86vw] flex-row flex-wrap justify-center gap-y-28 gap-x-8 overflow-y-scroll rounded-md pb-12 pt-20 shadow-xl shadow-black"
-          style={{ backgroundImage: `url(${shapes})` }}
-        >
+        <div className="myScrollbar mx-auto mt-4 flex h-[68vh] w-[86vw] flex-row flex-wrap justify-center gap-y-28 gap-x-8 overflow-y-scroll rounded-md pb-12 pt-20">
           {projects
             .filter((e) => e.category === category)
             .reverse()
@@ -139,7 +145,7 @@ export default function Projects() {
 
                 <div
                   onClick={() => setActiveModal({ active: true, project })}
-                  className="absolute top-0 right-0 flex h-full w-full items-center justify-center rounded-md bg-black bg-opacity-25 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
+                  className="absolute top-0 right-0 flex h-full w-full items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
                 >
                   <BsPlusLg size="2rem" />
                 </div>
