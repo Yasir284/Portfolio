@@ -63,6 +63,7 @@ export default function Contact() {
           <img src={contact} alt="contact" className="h-52 p-6 md:h-64" />
         </div>
 
+        {/* Contact form */}
         <form
           ref={form}
           onSubmit={sendEmail}
