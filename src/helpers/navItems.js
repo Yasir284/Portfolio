@@ -3,7 +3,7 @@ const navItems = [
     id: 1,
     name: "Home",
     link: "home",
-    offset: -60,
+    offset: -70,
   },
   {
     id: 2,

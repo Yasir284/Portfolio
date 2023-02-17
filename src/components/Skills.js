@@ -24,7 +24,7 @@ export default function Skills() {
               <AnimateCards
                 viewOnce={true}
                 index={index}
-                className="flex w-48 flex-col items-center justify-center rounded-lg bg-gradient-to-br from-[#603f71] to-[#863d61] p-10 uppercase shadow-lg shadow-black"
+                className="flex w-48 flex-col items-center justify-center rounded-lg bg-gradient-to-br from-[rgba(96,63,113,1)] to-[rgba(134,61,97,1)] p-10 uppercase shadow-lg shadow-black"
               >
                 <h2 className="text-xl font-bold">{skill.name}</h2>
                 <div className="w-32">

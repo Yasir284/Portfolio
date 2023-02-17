@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function AnimatedLetter({ text, viewOnce }) {
+export default function AnimatedLetter({ text, viewOnce, className }) {
   const letters = text?.split("");
 
   const containerVarient = {
@@ -37,7 +37,7 @@ export default function AnimatedLetter({ text, viewOnce }) {
       viewport={{ once: viewOnce === true ? true : false }}
       whileInView="animate"
       initial="initial"
-      className="flex flex-wrap"
+      className={`flex flex-wrap ${className ? className : ""}`}
     >
       {letters?.map((letter, index) => (
         <motion.span variants={childVarient} key={index} className="mr-1">

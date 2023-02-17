@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import shapes from "../assets/images/backgrounds/shapes.svg";
 
 // Components and helpers
-import projects from "../helpers/projects";
+import projects from "../helpers/content/projects";
 import AnimatedWord from "./sub-components/AnimatedWord";
 import ProjectDetail from "./modal/ProjectDetail";
 
@@ -127,14 +127,22 @@ export default function Projects() {
                 key={project.id}
                 layoutId={index}
                 layout
-                className="group relative flex flex-col items-center justify-between gap-2 rounded-md bg-black-900 pb-10 shadow-lg shadow-black active:scale-90"
+                className="group flex flex-col items-center justify-between gap-2 rounded-md pb-10 active:scale-90"
               >
-                <div className="flex aspect-video w-96 items-center justify-center rounded-md border border-black-700 bg-black-900">
+                <div className="relative flex aspect-video w-96 items-center justify-center rounded-md border border-black-700 bg-black-900 shadow-lg shadow-black">
                   <img
                     className="rounded-md object-cover"
                     src={project.images[0]}
                     alt={project.name + " image"}
                   />
+
+                  <div
+                    onClick={() => setActiveModal({ active: true, project })}
+                    className="absolute top-0 right-0 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
+                  >
+                    <p className="text-xl font-bold">Click to know more</p>
+                    <GiClick size="2rem" className="animate-ping" />
+                  </div>
                 </div>
 
                 <motion.h2
@@ -143,14 +151,6 @@ export default function Projects() {
                 >
                   {project.name}
                 </motion.h2>
-
-                <div
-                  onClick={() => setActiveModal({ active: true, project })}
-                  className="absolute top-0 right-0 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
-                >
-                  <p className="text-xl font-bold">Click to know more</p>
-                  <GiClick size="2rem" className="animate-ping" />
-                </div>
               </motion.div>
             ))}
         </div>
