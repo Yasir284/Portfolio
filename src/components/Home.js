@@ -23,8 +23,8 @@ const imageVaritent = {
 export default function Home() {
   return (
     <section id="home" className="h-[90vh] bg-fixed font-Balsamiq">
-      <div className="mx-20 grid h-full grid-cols-2 items-center justify-between">
-        <div className="col-span-full mt-10 flex flex-col items-center justify-center text-4xl font-extrabold md:col-span-1 md:justify-start">
+      <div className="mx-6 grid h-full grid-cols-2 items-center justify-between md:mx-20">
+        <div className="col-span-full mt-10 flex flex-col items-center justify-center text-4xl font-extrabold md:col-span-1 md:items-start">
           <h1 className="mb-4 text-7xl">
             <AnimatedLetter text={"Hi, I'am Yasir"} />
           </h1>

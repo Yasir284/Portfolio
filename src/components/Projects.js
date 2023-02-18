@@ -93,22 +93,22 @@ export default function Projects() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div>
+      <div className="px-6 md:px-20">
         <h2 className="mx-auto w-fit font-Balsamiq text-4xl font-extrabold">
           <AnimatedWord text={"Projects"} viewOnce={true} />
         </h2>
         <hr className="mb-4 border-black-700" />
 
         {/* Project category list */}
-        <ul className="mx-auto flex w-fit flex-row items-center justify-center rounded-md shadow-inner shadow-black">
+        <ul className="flex flex-row flex-wrap items-center justify-center gap-4 rounded-md md:mx-auto md:w-fit md:gap-0 md:shadow-inner md:shadow-black">
           {itemList.map((list, index) => (
             <li
               onClick={() => list.onClick()}
               key={index}
-              className={`w-36 cursor-pointer rounded-md py-2 px-4 text-center font-bold uppercase transition-all duration-200 ease-in-out active:scale-90 ${
+              className={`cursor-pointer rounded-md py-2 px-4 text-center font-bold uppercase transition-all duration-200 ease-in-out active:scale-90 sm:w-36 ${
                 acitveId === list.id
                   ? "bg-white text-black shadow-inner shadow-black-700"
-                  : "backdrop-blur-sm backdrop-filter"
+                  : "md:backdrop-blur-sm md:backdrop-filter"
               }`}
             >
               {list.name}
@@ -116,7 +116,7 @@ export default function Projects() {
           ))}
         </ul>
 
-        <div className="myScrollbar mx-auto mt-4 flex h-[68vh] w-[86vw] flex-row flex-wrap justify-center gap-y-28 gap-x-8 overflow-y-scroll rounded-md pb-12 pt-20">
+        <div className="myScrollbar mx-auto mt-4 flex h-[68vh] flex-row flex-wrap justify-center gap-x-8 overflow-y-scroll rounded-md py-4 sm:pb-12 sm:pt-20 md:w-[86vw] md:gap-y-28">
           {projects
             .filter((e) => e.category === category)
             .reverse()
@@ -129,7 +129,7 @@ export default function Projects() {
                 layout
                 className="group flex flex-col items-center justify-between gap-2 rounded-md pb-10 active:scale-90"
               >
-                <div className="relative flex aspect-video w-96 items-center justify-center rounded-md border border-black-700 bg-black-900 shadow-lg shadow-black">
+                <div className="relative flex aspect-video w-80 items-center justify-center rounded-md border border-black-700 bg-black-900 shadow-lg shadow-black sm:w-96">
                   <img
                     className="rounded-md object-cover"
                     src={project.images[0]}

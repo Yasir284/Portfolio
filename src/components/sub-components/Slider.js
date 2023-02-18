@@ -21,7 +21,7 @@ export default function Slider({ images }) {
       keyboard={{ enabled: true }}
       navigation={images?.length > 1 ? true : false}
       modules={[EffectCube, Pagination, Navigation, Autoplay]}
-      className="w-96 rounded-md bg-transparent"
+      className="w-80 rounded-md bg-transparent sm:w-96"
     >
       {images &&
         images.map((img, index) => (

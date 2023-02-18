@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 right-0 z-20 backdrop-blur-md backdrop-filter">
-      <div className="flex h-[10vh] flex-row items-center justify-between border-b border-black-700 px-20 font-Roboto tracking-widest">
+      <div className="flex flex-row items-center justify-between border-b border-black-700 py-3 px-6 font-Roboto tracking-widest sm:py-6 md:px-20">
         <Link smooth={true} duration={500} to="home" className="cursor-pointer">
           <h1 className="font-Balsamiq text-2xl font-bold">My Portfolio</h1>
         </Link>
@@ -42,7 +42,11 @@ export default function Navbar() {
           onClick={() => setActive(!active)}
           className="block text-white transition-all duration-200 ease-in-out active:scale-75 md:hidden"
         >
-          {active ? <GiHamburgerMenu size="2rem" /> : <MdClose size="2rem" />}
+          {active ? (
+            <GiHamburgerMenu className="text-[1.5rem] sm:text-[2rem]" />
+          ) : (
+            <MdClose className="text-[1.5rem] sm:text-[2rem]" />
+          )}
         </button>
       </div>
       <AnimatePresence>
