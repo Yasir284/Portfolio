@@ -44,7 +44,7 @@ export default function About() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="py-12 px-6 md:px-20"
+      className="py-16 px-6 md:px-20"
     >
       <div className="flex flex-col items-end gap-10 md:gap-4">
         <div className="flex flex-col-reverse justify-between gap-6 sm:flex-row sm:gap-0">
@@ -89,7 +89,7 @@ export default function About() {
         </div>
 
         {/* Education timeline */}
-        <div className="relative col-span-12 ml-5 sm:col-span-9 md:ml-0 md:-mt-28 md:w-[68%]">
+        <div className="relative col-span-12 ml-5 sm:col-span-9 md:ml-0 md:-mt-28  md:w-[68%]">
           <div className="relative col-span-12 space-y-12 before:absolute before:top-2 before:bottom-0 before:-left-[23px] before:w-0.5 before:bg-gray-400 sm:col-span-8 sm:space-y-8">
             {qualifications.map((data, index) => (
               <div
