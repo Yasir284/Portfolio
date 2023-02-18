@@ -1,13 +1,13 @@
-![badge](https://img.shields.io/badge/MADE%20WITH-REACT%20&%TAILWIND-blue)
-[![badge](https://img.shields.io/badge/SEE%20DEMO%20-VISIT-green)](https://moviefilx.netlify.app/)
+![badge](https://img.shields.io/badge/MADE%20WITH-REACT%20&%20TAILWIND-blue)
+[![badge](https://img.shields.io/badge/SEE%20DEMO%20-VISIT-green)](https://portfolio-by-yasir.netlify.app)
 
 # My Portfolio
 
-- This is my porfolio website made with React and tailwind.
+- This is my porfolio website which made with React and tailwind.
 
 - I have hosted this website on Netlify, please find the link below:
 
-  [![frontend link](https://img.shields.io/badge/LINK%20OF-PROJECT-red)](https://moviefilx.netlify.app/)
+  [![frontend link](https://img.shields.io/badge/LINK%20OF-PROJECT-red)](https://portfolio-by-yasir.netlify.app)
 
 ---
 
@@ -23,6 +23,24 @@
 ---
 
 ## 🎥 Screenshot
+
+- Home section
+  ![Home section](./src/assets/images/portfolio%20screenshot/img-1.png)
+
+- About section
+  ![About section](./src/assets/images/portfolio%20screenshot/img-2.png)
+
+- Skills section
+  ![Skills section](./src/assets/images/portfolio%20screenshot/img-3.png)
+
+- Projects section
+  ![Projects section](./src/assets/images/portfolio%20screenshot/img-4.png)
+
+- Project details modal
+  ![Project details modal](./src/assets/images/portfolio%20screenshot/img-5.png)
+
+-Contact section
+![Contact section](./src/assets/images/portfolio%20screenshot/img-6.png)
 
 ---
 
