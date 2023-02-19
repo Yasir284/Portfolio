@@ -3,7 +3,7 @@
 
 # My Portfolio
 
-- This is my porfolio website which made with React and tailwind.
+- This is my portfolio website which is made with React and tailwind. It contains information about me, my skills, the project that I have made, and more.
 
 - I have hosted this website on Netlify, please find the link below:
 
