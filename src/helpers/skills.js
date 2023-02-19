@@ -6,6 +6,8 @@ import mongodb from "../assets/images/skills/mongodb.ico";
 import nodejs from "../assets/images/skills/node-js.png";
 import react from "../assets/images/skills/react.png";
 import appwrite from "../assets/images/skills/appwrite.webp";
+import bootstrap from "../assets/images/skills/bootstrap.ico";
+import tailwind from "../assets/images/skills/tailwind.png";
 
 const skills = [
   {
@@ -19,6 +21,14 @@ const skills = [
   {
     name: "JavaScript",
     src: javascript,
+  },
+  {
+    name: "Tailwind",
+    src: tailwind,
+  },
+  {
+    name: "Bootstrap",
+    src: bootstrap,
   },
   {
     name: "React",
