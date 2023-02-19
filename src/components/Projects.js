@@ -116,7 +116,8 @@ export default function Projects() {
           ))}
         </ul>
 
-        <div className="myScrollbar mx-auto mt-4 flex h-[68vh] flex-row flex-wrap justify-center gap-x-8 overflow-y-scroll rounded-md py-4 sm:pb-12 sm:pt-20 md:w-[86vw] md:gap-y-28">
+        {/* Projects */}
+        <div className="myScrollbar mx-auto mt-4 flex h-[90vh] flex-row flex-wrap justify-center gap-8 overflow-y-scroll rounded-md py-4 sm:py-12 md:w-[86vw]">
           {projects
             .filter((e) => e.category === category)
             .reverse()
@@ -127,7 +128,7 @@ export default function Projects() {
                 key={project.id}
                 layoutId={index}
                 layout
-                className="group flex flex-col items-center justify-between gap-2 rounded-md pb-10 active:scale-90"
+                className="group flex flex-col items-center gap-6 rounded-md active:scale-90"
               >
                 <div className="relative flex aspect-video w-80 items-center justify-center rounded-md border border-black-700 bg-black-900 shadow-lg shadow-black sm:w-96">
                   <img
