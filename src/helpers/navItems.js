@@ -15,7 +15,7 @@ const navItems = [
     id: 3,
     name: "Skills",
     link: "skills",
-    offset: -75,
+    offset: -60,
   },
   {
     id: 4,

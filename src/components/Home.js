@@ -22,11 +22,14 @@ const imageVaritent = {
 
 export default function Home() {
   return (
-    <section id="home" className="h-[90vh] bg-fixed font-Balsamiq">
-      <div className="mx-6 grid h-full grid-cols-2 items-center justify-between md:mx-20">
-        <div className="col-span-full mt-10 flex flex-col items-center justify-center text-4xl font-extrabold md:col-span-1 md:items-start">
+    <section id="home" className="relative h-[90vh] bg-fixed font-Balsamiq">
+      <div className="mx-6 grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20">
+        <div className="col-span-full mt-10 flex flex-col items-center justify-center text-4xl font-extrabold sm:mt-0 md:col-span-1 md:items-start">
           <h1 className="mb-4 text-7xl">
-            <AnimatedLetter text={"Hi, I'am Yasir"} />
+            <AnimatedLetter
+              text={"Hi, I'am Yasir"}
+              className="justify-center sm:justify-start"
+            />
           </h1>
 
           <p className="text-3xl font-bold">
@@ -53,7 +56,7 @@ export default function Home() {
 
         <motion.div
           {...imageVaritent}
-          className="col-span-full mx-auto -mt-20 w-2/3 md:col-span-1 md:w-full"
+          className="absolute -bottom-10 right-0 left-10 -z-10 col-span-full mx-auto sm:static md:col-span-1 md:w-full"
         >
           <img src={mainImage} className="w-full" alt="Main page svg" />
         </motion.div>

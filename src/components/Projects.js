@@ -83,16 +83,7 @@ export default function Projects() {
   });
 
   return (
-    <section
-      id="projects"
-      className="py-10"
-      style={{
-        backgroundImage: `url(${shapes})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <section id="projects" className="custom-bg py-10">
       <div className="px-6 md:px-20">
         <h2 className="mx-auto w-fit font-Balsamiq text-4xl font-extrabold">
           <AnimatedWord text={"Projects"} viewOnce={true} />

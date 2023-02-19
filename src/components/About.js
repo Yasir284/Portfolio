@@ -34,80 +34,67 @@ const containerVarient = {
 
 export default function About() {
   return (
-    <motion.section
-      {...containerVarient}
-      viewport={{ once: true }}
-      id="about"
-      style={{
-        backgroundImage: `url(${shapes})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="py-16 px-6 md:px-20"
-    >
-      <div className="flex flex-col items-end gap-10 md:gap-4">
-        <div className="flex flex-col-reverse justify-between gap-6 sm:flex-row sm:gap-0">
-          <div className="flex flex-col items-center sm:basis-[30%]">
-            <motion.div
-              {...imageVaritent}
-              className="h-52 w-36 overflow-hidden rounded-3xl bg-black-800 shadow-lg shadow-black-800 md:h-64 md:w-48"
-            >
-              <img src={myImage} alt="Yasir" />
-            </motion.div>
+    <section id="about" className="custom-bg py-10 px-6 md:px-20">
+      <motion.div
+        {...containerVarient}
+        viewport={{ once: true }}
+        className="flex flex-col gap-6"
+      >
+        <h2 className="text-4xl font-extrabold">
+          <AnimatedWord
+            text={"About me"}
+            viewOnce={true}
+            className="justify-center"
+          />
+          <hr className="mt-2 border-black-700" />
+        </h2>
 
-            <button className="mt-6 flex items-center justify-center gap-4 rounded-full border border-white bg-white px-4 py-2 text-black transition-all duration-200  ease-in-out hover:bg-transparent hover:text-white">
-              <a
-                href="https://drive.google.com/file/d/1Yu6sOByAG_06BWlkqyVs8zQbKdR82Tgw/view?usp=share_link"
-                target="_blank"
-                rel="noreferrer"
+        <div className="flex flex-col gap-12 md:flex-row md:gap-6">
+          <div className="flex basis-[30%] flex-col-reverse items-center gap-6 sm:flex-col">
+            <div className="flex flex-col items-center gap-6">
+              <motion.div
+                {...imageVaritent}
+                className="h-52 w-36 overflow-hidden rounded-3xl bg-black-800 shadow-lg shadow-black-800 md:h-64 md:w-48"
               >
-                Resume
-              </a>
-              <HiOutlineDownload size="1.5rem" />
-            </button>
+                <img src={myImage} alt="Yasir" />
+              </motion.div>
+
+              <button className="flex items-center justify-center gap-4 rounded-full border border-white bg-white px-4 py-2 text-black transition-all duration-200  ease-in-out hover:bg-transparent hover:text-white">
+                <a
+                  href="https://drive.google.com/file/d/1Yu6sOByAG_06BWlkqyVs8zQbKdR82Tgw/view?usp=share_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume
+                </a>
+                <HiOutlineDownload size="1.5rem" />
+              </button>
+            </div>
+
+            <p className="text-center text-sm">{aboutMe}</p>
           </div>
 
-          {/* About me */}
-          <motion.div className="sm:basis-[70%]">
-            <h2 className="mb-2 text-4xl font-extrabold">
-              <AnimatedWord
-                text={"About me"}
-                viewOnce={true}
-                className="justify-center sm:justify-start"
-              />
-            </h2>
-            <hr className="mb-4 border-black-700" />
-            <p>
-              <AnimatedWord
-                text={aboutMe}
-                viewOnce={true}
-                className="justify-center sm:justify-start"
-              />
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Education timeline */}
-        <div className="relative col-span-12 ml-5 sm:col-span-9 md:ml-0 md:-mt-28  md:w-[68%]">
-          <div className="relative col-span-12 space-y-12 before:absolute before:top-2 before:bottom-0 before:-left-[23px] before:w-0.5 before:bg-gray-400 sm:col-span-8 sm:space-y-8">
-            {qualifications.map((data, index) => (
-              <div
-                key={index}
-                className="relative flex flex-col before:absolute before:top-2 before:left-[-30px] before:z-[1] before:h-4 before:w-4 before:rounded-full before:bg-gray-400"
-              >
-                <h3 className="text-xl font-semibold tracking-wide">
-                  <AnimatedWord text={data.qualification} />
-                </h3>
-                <time className="text-xs uppercase tracking-wide text-gray-400">
-                  {data.year}
-                </time>
-                <p className="my-3">{data.description}</p>
-              </div>
-            ))}
+          {/* Education timeline */}
+          <div className="relative col-span-12 ml-6 basis-[70%] sm:col-span-9">
+            <div className="relative col-span-12 space-y-12 before:absolute before:top-2 before:bottom-0 before:-left-[23px] before:w-0.5 before:bg-white sm:col-span-8 sm:space-y-8">
+              {qualifications.map((data, index) => (
+                <div
+                  key={index}
+                  className="relative flex flex-col before:absolute before:top-2 before:left-[-30px] before:z-[1] before:h-4 before:w-4 before:rounded-full before:bg-violet-400 sm:pb-6"
+                >
+                  <h3 className="text-xl font-semibold tracking-wide">
+                    <AnimatedWord text={data.qualification} viewOnce={true} />
+                  </h3>
+                  <time className="text-xs uppercase tracking-wide text-gray-400">
+                    {data.year}
+                  </time>
+                  <p className="my-3 sm:mb-6">{data.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }

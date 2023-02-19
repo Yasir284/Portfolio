@@ -14,10 +14,6 @@ const {
   REACT_APP_EMAILJS_TEMPLATE_ID,
   REACT_APP_EMAILJS_PUBLIC_ID,
 } = process.env;
-// const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-// const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-// const PUBLIC_ID = process.env.REACT_APP_EMAILJS_PUBLIC_ID;
-// const PUBLIC_ID = "2NZRItbuwUKgMHTMK";
 
 export default function Contact() {
   const form = useRef();
@@ -43,13 +39,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="p-12">
-      <h2 className="mx-auto w-fit text-4xl">
-        <AnimatedWord text={"Get in touch"} viewOnce={true} />
+    <section id="contact" className="py-10 md:p-12">
+      <h2 className="px-6 text-4xl">
+        <AnimatedWord
+          text={"Get in touch"}
+          viewOnce={true}
+          className="justify-center"
+        />
+        <hr className="border border-black-700" />
       </h2>
-      <hr className="border border-black-700" />
 
-      <div className="mx-auto mt-4 grid max-w-screen-xl grid-cols-1 gap-8 rounded-lg bg-black bg-opacity-20 px-8 py-16 backdrop-blur-sm backdrop-filter md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+      <div className="max-w-screen-xl xl:px-32 mx-auto mt-4 grid grid-cols-1 gap-8 rounded-lg bg-black bg-opacity-20 px-6 py-6 backdrop-blur-sm backdrop-filter md:grid-cols-2 md:px-12 lg:px-16">
         <div className="flex flex-col justify-between">
           <div className="space-y-2">
             <h2 className="text-4xl font-bold leading-tight lg:text-5xl">

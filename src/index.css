@@ -29,11 +29,15 @@ h2 {
   font-family: "Balsamiq Sans";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Background image */
+.custom-bg {
+  background-image: url(./assets/images/backgrounds/shapes.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+/* Customize Scrollbar */
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -62,6 +66,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+/* Navbar item active style */
 .active {
   background-color: #ffffff;
   color: #000000;

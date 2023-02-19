@@ -57,7 +57,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                     rel="noreferrer"
                     className="flex w-fit flex-row items-center gap-3 rounded-md bg-white bg-opacity-20 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
                   >
-                    <AiFillPlayCircle size="1.5rem" className="text-red-500" />
+                    <AiFillPlayCircle size="1.5rem" className="text-red-400" />
                     <p>Live Link</p>
                   </a>
                   <a
@@ -66,7 +66,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                     rel="noreferrer"
                     className="flex w-fit flex-row items-center gap-3 rounded-md bg-white bg-opacity-20 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
                   >
-                    <AiFillGithub size="1.5rem" className="text-violet-500" />
+                    <AiFillGithub size="1.5rem" className="text-violet-400" />
                     <p>Github Link</p>
                   </a>
                 </div>

@@ -5,7 +5,7 @@ export default function AnimatedLetter({ text, viewOnce, className }) {
 
   const containerVarient = {
     initial: {
-      opacity: 0,
+      opacity: 1,
     },
     animate: (i = 1) => ({
       opacity: 1,
@@ -19,13 +19,10 @@ export default function AnimatedLetter({ text, viewOnce, className }) {
   const childVarient = {
     initial: {
       opacity: 0,
-      y: 20,
       x: -20,
-      transition: { type: "spring", damping: 12, stiffness: 100 },
     },
     animate: {
       opacity: 1,
-      y: 0,
       x: 0,
       transition: { type: "spring", damping: 12, stiffness: 100 },
     },
