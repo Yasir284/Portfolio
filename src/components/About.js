@@ -9,7 +9,6 @@ import qualifications from "../helpers/content/qualification";
 import AnimatedWord from "./sub-components/AnimatedWord";
 
 // Images
-import shapes from "../assets/images/backgrounds/shapes.svg";
 import myImage from "../assets/images/my-image.png";
 import aboutMe from "../helpers/content/aboutMe";
 

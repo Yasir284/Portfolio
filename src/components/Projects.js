@@ -2,9 +2,6 @@ import { useState } from "react";
 import { GiClick } from "react-icons/gi";
 import { motion } from "framer-motion";
 
-// Images
-import shapes from "../assets/images/backgrounds/shapes.svg";
-
 // Components and helpers
 import projects from "../helpers/content/projects";
 import AnimatedWord from "./sub-components/AnimatedWord";
