@@ -3,7 +3,7 @@ const qualifications = [
     qualification: "Bachelor of engineering",
     year: "June 2022",
     description:
-      "I have completed my B-tech in mechanical engineering with 8.4 CGPA, at Gujarat Technological University, from S.V.I.T, Vasad.",
+      "I have completed my B-tech in mechanical engineering with 8.57 CGPA, at Gujarat Technological University, from S.V.I.T, Vasad.",
   },
   {
     qualification: "Higher Secondary Education",
