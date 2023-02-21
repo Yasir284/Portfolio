@@ -24,7 +24,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
           className="fixed top-0 right-0 z-20 flex h-full w-full flex-row items-center justify-center bg-black bg-opacity-20 backdrop-blur-sm backdrop-filter"
         >
           <div
-            className="relative m-4 flex rounded-3xl bg-red-500 px-4 py-16 sm:p-16 md:m-0 md:w-[80%]"
+            className="relative m-4 flex rounded-3xl px-4 py-16 sm:p-16 md:m-0 md:w-[80%]"
             style={{ backgroundImage: `url(${shapes})` }}
           >
             {/* Close button */}
