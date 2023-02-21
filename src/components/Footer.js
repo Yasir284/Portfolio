@@ -1,5 +1,4 @@
 import navItems from "../helpers/navItems";
-import { Link } from "react-scroll";
 import socialLinks from "../helpers/socialLinks";
 
 export default function Footer() {
@@ -19,17 +18,12 @@ export default function Footer() {
         <div className="hidden md:block">
           <ul className="flex flex-row items-center gap-4 text-xs uppercase">
             {navItems.map((list, index) => (
-              <li key={list.id}>
-                <Link
-                  key={index}
-                  to={list.link}
-                  smooth={true}
-                  offset={list.offset}
-                  duration={500}
-                  className="cursor-pointer p-2 text-gray-500 transition-all duration-200 ease-in-out hover:text-white active:scale-90"
-                >
-                  {list.name}
-                </Link>
+              <li
+                onClick={() => list.handleClick}
+                key={index}
+                className="cursor-pointer p-2 text-gray-500 transition-all duration-200 ease-in-out hover:text-white active:scale-90"
+              >
+                {list.name}
               </li>
             ))}
           </ul>

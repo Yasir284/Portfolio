@@ -1,6 +1,5 @@
 // Dependencies and react hooks
 import { useState } from "react";
-import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 
 // React icons
@@ -13,27 +12,45 @@ import navItems from "../helpers/navItems";
 export default function Navbar() {
   const [active, setActive] = useState(true);
 
+  function getCompInView(component) {
+    // let bounding = document.getElementById("about")?.getBoundingClientRect();
+    // console.log(bounding);
+    // if (
+    //   bounding.top >= 0 &&
+    //   bounding.left >= 0 &&
+    //   bounding.right <= window.innerWidth &&
+    //   bounding.bottom <= window.innerHeight
+    // ) {
+    //   console.log("Element is in the viewport!");
+    // } else {
+    //   console.log("Element is NOT in the viewport!");
+    // }
+    component?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+    // window.scrollTo({top:bounding.top,behavior:'smooth'})
+  }
+
   return (
     <nav className="sticky top-0 right-0 z-20 backdrop-blur-md backdrop-filter">
-      <div className="flex flex-row items-center justify-between border-b border-black-700 py-3 px-6 font-Roboto tracking-widest sm:py-6 md:px-20">
-        <Link smooth={true} duration={500} to="home" className="cursor-pointer">
+      <div className="flex flex-row items-center justify-between border-b border-black-700 py-3 px-6 font-Roboto tracking-widest sm:py-4 md:px-20">
+        <div
+          onClick={() => getCompInView(document.getElementById(navItems[0].id))}
+          className="cursor-pointer"
+        >
           <h1 className="font-Balsamiq text-2xl font-bold">My Portfolio</h1>
-        </Link>
+        </div>
 
         <ul className="hidden flex-row items-center gap-6 uppercase md:flex">
           {navItems.map((list) => (
-            <li key={list.id}>
-              <Link
-                activeClass="active"
-                to={list.link}
-                spy={true}
-                smooth={true}
-                offset={list.offset}
-                duration={500}
-                className="cursor-pointer rounded-md border-2 border-transparent px-4 py-2 transition-all duration-200 ease-in-out hover:border-white active:scale-90"
-              >
-                {list.name}
-              </Link>
+            <li
+              key={list.id}
+              onClick={() => getCompInView(document.getElementById(list.id))}
+              className="cursor-pointer rounded-md border-2 border-transparent px-4 py-2 transition-all duration-200 ease-in-out hover:border-white active:scale-90"
+            >
+              {list.name}
             </li>
           ))}
         </ul>
@@ -61,20 +78,13 @@ export default function Navbar() {
             <motion.ul className="w-full flex-col items-center uppercase md:flex">
               {navItems.map((list) => (
                 <li
+                  onClick={() =>
+                    getCompInView(document.getElementById(list.id))
+                  }
                   key={list.id}
                   className="w-full cursor-pointer border-b border-black-700 py-3 text-center transition-all duration-300 ease-in-out hover:bg-[rgba(255,255,255,0.53)]"
                 >
-                  <Link
-                    activeClass="active"
-                    to={list.link}
-                    spy={true}
-                    smooth={true}
-                    offset={list.offset}
-                    duration={500}
-                    className="w-full"
-                  >
-                    <p>{list.name}</p>
-                  </Link>
+                  <p>{list.name}</p>
                 </li>
               ))}
             </motion.ul>

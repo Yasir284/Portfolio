@@ -17,7 +17,6 @@
 - Tailwind - as CSS framework
 - Framer motion - for adding animations
 - Swiper - as image slider
-- React-scroll - npm package for scrolling animation
 - React-toastify - npm package for displaying messages
 
 ---
