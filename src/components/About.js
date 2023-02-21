@@ -33,7 +33,7 @@ const containerVarient = {
 
 export default function About() {
   return (
-    <section id="about" className="custom-bg py-10 px-6 md:px-20">
+    <section id="about" className="custom-bg min-h-screen py-10 px-6 md:px-20">
       <motion.div
         {...containerVarient}
         viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function About() {
               </button>
             </div>
 
-            <p className="text-center text-sm">{aboutMe}</p>
+            <p className="text-center md:text-sm">{aboutMe}</p>
           </div>
 
           {/* Education timeline */}

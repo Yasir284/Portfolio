@@ -1,5 +1,5 @@
 // Dependencies
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 // Images
@@ -8,6 +8,7 @@ import contact from "../assets/images/contact.svg";
 // Components and helpers
 import AnimatedWord from "./sub-components/AnimatedWord";
 import { toast } from "react-toastify";
+import Loader from "./sub-components/Loader";
 
 const {
   REACT_APP_EMAILJS_SERVICE_ID,
@@ -17,9 +18,11 @@ const {
 
 export default function Contact() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -30,9 +33,11 @@ export default function Contact() {
       )
       .then(
         (result) => {
+          setLoading(false);
           toast("Message sent", { type: "success" });
         },
         (error) => {
+          setLoading(false);
           toast("Error in sending your message", { type: "error" });
         }
       );
@@ -113,6 +118,7 @@ export default function Contact() {
           </button>
         </form>
       </div>
+      {loading && <Loader />}
     </section>
   );
 }

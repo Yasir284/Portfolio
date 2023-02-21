@@ -29,17 +29,17 @@ export default function Home() {
   }
 
   return (
-    <section id="home" className="relative h-[90vh] bg-fixed font-Balsamiq">
-      <div className="mx-6 grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20">
-        <div className="col-span-full mt-10 flex flex-col items-center justify-center text-4xl font-extrabold sm:mt-0 md:col-span-1 md:items-start">
-          <h1 className="mb-4 text-7xl">
+    <section id="home" className="relative h-screen bg-fixed font-Balsamiq">
+      <div className="mx-6 mt-10 grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20 md:mt-0">
+        <div className="col-span-full flex h-full flex-col items-center justify-start text-4xl font-extrabold sm:mt-0 md:col-span-1 md:items-start md:justify-center">
+          <h1 className="mb-4 text-5xl sm:text-7xl">
             <AnimatedLetter
               text={"Hi, I'am Yasir"}
               className="justify-center sm:justify-start"
             />
           </h1>
 
-          <p className="text-3xl font-bold">
+          <p className="text-2xl font-bold sm:text-3xl">
             <AnimatedWord
               text={
                 "A fullstack Javascript developer with proficiency in frontend."
@@ -59,7 +59,7 @@ export default function Home() {
 
         <motion.div
           {...imageVaritent}
-          className="absolute -bottom-10 right-0 left-10 -z-10 col-span-full mx-auto sm:static md:col-span-1 md:w-full"
+          className="absolute top-[40%] right-0 left-10 -z-10 col-span-full mx-auto sm:static sm:w-2/3 md:col-span-1 md:w-full"
         >
           <img src={mainImage} className="w-full" alt="Main page svg" />
         </motion.div>
