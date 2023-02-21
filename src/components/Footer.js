@@ -2,6 +2,14 @@ import navItems from "../helpers/navItems";
 import socialLinks from "../helpers/socialLinks";
 
 export default function Footer() {
+  function getCompInView(component) {
+    component?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+
   return (
     <footer className="flex flex-col gap-2 border-t border-black-700 bg-black-900 py-8 px-6 md:px-20">
       <div className="flex flex-row flex-wrap items-center justify-center md:justify-between">
@@ -19,7 +27,7 @@ export default function Footer() {
           <ul className="flex flex-row items-center gap-4 text-xs uppercase">
             {navItems.map((list, index) => (
               <li
-                onClick={() => list.handleClick}
+                onClick={() => getCompInView(document.getElementById(list.id))}
                 key={index}
                 className="cursor-pointer p-2 text-gray-500 transition-all duration-200 ease-in-out hover:text-white active:scale-90"
               >
