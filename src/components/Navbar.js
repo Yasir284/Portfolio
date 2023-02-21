@@ -13,24 +13,11 @@ export default function Navbar() {
   const [active, setActive] = useState(true);
 
   function getCompInView(component) {
-    // let bounding = document.getElementById("about")?.getBoundingClientRect();
-    // console.log(bounding);
-    // if (
-    //   bounding.top >= 0 &&
-    //   bounding.left >= 0 &&
-    //   bounding.right <= window.innerWidth &&
-    //   bounding.bottom <= window.innerHeight
-    // ) {
-    //   console.log("Element is in the viewport!");
-    // } else {
-    //   console.log("Element is NOT in the viewport!");
-    // }
     component?.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "nearest",
     });
-    // window.scrollTo({top:bounding.top,behavior:'smooth'})
   }
 
   return (

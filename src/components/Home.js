@@ -1,7 +1,6 @@
 // Dependencies
 import { motion } from "framer-motion";
 import { FaAngleDoubleDown } from "react-icons/fa";
-import { Link } from "react-scroll";
 
 // Images
 import mainImage from "../assets/images/header-img.svg";
@@ -21,6 +20,14 @@ const imageVaritent = {
 };
 
 export default function Home() {
+  function getCompInView(component) {
+    component?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+
   return (
     <section id="home" className="relative h-[90vh] bg-fixed font-Balsamiq">
       <div className="mx-6 grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20">
@@ -41,16 +48,12 @@ export default function Home() {
             />
           </p>
 
-          <button>
-            <Link
-              to="about"
-              smooth={true}
-              offset={-60}
-              className="mt-10 flex items-center justify-center gap-4 rounded-full border border-white bg-white py-2 px-4 text-black transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white"
-            >
-              <p className="text-lg">Know more about me</p>
-              <FaAngleDoubleDown size="1.5rem" className="animate-pulse" />
-            </Link>
+          <button
+            onClick={() => getCompInView(document.getElementById("about"))}
+            className="mt-10 flex items-center justify-center gap-4 rounded-full border border-white bg-white py-2 px-4 text-black transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white"
+          >
+            <p className="text-lg">Know more about me</p>
+            <FaAngleDoubleDown size="1.5rem" className="animate-pulse" />
           </button>
         </div>
 
