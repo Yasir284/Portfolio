@@ -58,15 +58,16 @@ export default function About() {
                 <img src={myImage} alt="Yasir" />
               </motion.div>
 
-              <button className="flex items-center justify-center gap-4 rounded-full border border-white bg-white px-4 py-2 text-black transition-all duration-200  ease-in-out hover:bg-transparent hover:text-white">
+              <button>
                 <a
-                  href="https://drive.google.com/file/d/1Yu6sOByAG_06BWlkqyVs8zQbKdR82Tgw/view?usp=share_link"
+                  href="https://drive.google.com/file/d/1-CGYUTV3lUPzkYFIq9J7wq7tMI2dZ_fa/view?usp=share_link"
                   target="_blank"
                   rel="noreferrer"
+                  className="flex items-center justify-center gap-4 rounded-full border border-white bg-white px-4 py-2 text-black transition-all duration-200  ease-in-out hover:bg-transparent hover:text-white"
                 >
                   Resume
+                  <HiOutlineDownload size="1.5rem" />
                 </a>
-                <HiOutlineDownload size="1.5rem" />
               </button>
             </div>
 
