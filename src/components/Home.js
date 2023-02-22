@@ -36,6 +36,7 @@ export default function Home() {
             <AnimatedLetter
               text={"Hi, I'am Yasir"}
               className="justify-center sm:justify-start"
+              viewOnce={true}
             />
           </h1>
 
@@ -45,6 +46,7 @@ export default function Home() {
                 "A fullstack Javascript developer with proficiency in frontend."
               }
               className="justify-center md:justify-start"
+              viewOnce={true}
             />
           </p>
 
