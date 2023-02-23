@@ -39,13 +39,9 @@ export default function About() {
         viewport={{ once: true }}
         className="flex flex-col gap-6"
       >
-        <h2 className="text-4xl font-extrabold">
-          <AnimatedWord
-            text={"About me"}
-            viewOnce={true}
-            className="justify-center"
-          />
-          <hr className="mt-2 border-black-700" />
+        <h2 className="text-center text-4xl font-extrabold">
+          About me
+          <hr className="border-black-700" />
         </h2>
 
         <div className="flex flex-col gap-12 md:flex-row md:gap-6">

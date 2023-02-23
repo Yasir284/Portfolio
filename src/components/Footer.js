@@ -1,5 +1,6 @@
 import navItems from "../helpers/navItems";
 import socialLinks from "../helpers/socialLinks";
+import { TfiArrowCircleUp } from "react-icons/tfi";
 
 export default function Footer() {
   function getCompInView(component) {
@@ -11,7 +12,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="flex flex-col gap-2 border-t border-black-700 bg-black-900 py-8 px-6 md:px-20">
+    <footer className="relative flex flex-col gap-2 border-t border-black-700 bg-black-900 py-4 px-6 md:px-20">
       <div className="flex flex-row flex-wrap items-center justify-center md:justify-between">
         <div className="flex flex-row gap-6">
           {socialLinks.map((social, index) => (
@@ -38,6 +39,16 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-gray-500">© Yasir Lambawala.</div>
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit bg-black"
+      >
+        <TfiArrowCircleUp
+          size="2.2rem"
+          className="text-gray-400 transition-all duration-200 ease-in-out hover:scale-105 hover:text-white"
+        />
+      </button>
     </footer>
   );
 }

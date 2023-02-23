@@ -6,7 +6,6 @@ import emailjs from "@emailjs/browser";
 import contact from "../assets/images/contact.svg";
 
 // Components and helpers
-import AnimatedWord from "./sub-components/AnimatedWord";
 import { toast } from "react-toastify";
 import Loader from "./sub-components/Loader";
 
@@ -45,12 +44,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-10 md:p-12">
-      <h2 className="px-6 text-4xl">
-        <AnimatedWord
-          text={"Get in touch"}
-          viewOnce={true}
-          className="justify-center"
-        />
+      <h2 className="text-center text-4xl">
+        Get in touch
         <hr className="border border-black-700" />
       </h2>
 

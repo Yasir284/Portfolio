@@ -4,18 +4,14 @@ import { motion } from "framer-motion";
 
 // Components and helpers
 import projects from "../helpers/content/projects";
-import AnimatedWord from "./sub-components/AnimatedWord";
 import ProjectDetail from "./modal/ProjectDetail";
 
 const cardVarient = {
-  initial: { opacity: 0, x: -30 },
-  whileInView: { opacity: 1, x: 0 },
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   whileHover: { y: -20 },
+  viewport: { once: true },
   transition: {
-    type: "spring",
-    stiffness: 100,
-    damping: 12,
-    duration: 1,
     opacity: { delay: 0.2 },
     x: { delay: 0.2 },
   },
@@ -25,7 +21,7 @@ const textVarient = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
   viewport: { once: true },
-  transition: { delay: 0.35 },
+  transition: { delay: 0.3 },
 };
 
 export default function Projects() {
@@ -83,7 +79,7 @@ export default function Projects() {
     <section id="projects" className="custom-bg min-h-screen py-10">
       <div className="px-6 md:px-20">
         <h2 className="mx-auto w-fit font-Balsamiq text-4xl font-extrabold">
-          <AnimatedWord text={"Projects"} viewOnce={true} />
+          Projects
         </h2>
         <hr className="mb-4 border-black-700" />
 
@@ -111,7 +107,6 @@ export default function Projects() {
             .reverse()
             .map((project, index) => (
               <motion.div
-                viewport={{ once: true }}
                 {...cardVarient}
                 key={project.id}
                 layoutId={index}
@@ -120,7 +115,7 @@ export default function Projects() {
               >
                 <div className="relative flex aspect-video w-80 items-center justify-center rounded-md border border-black-700 bg-black-900 shadow-lg shadow-black sm:w-96">
                   <img
-                    className="rounded-md object-cover"
+                    className="aspect-video w-full rounded-md object-contain"
                     src={project.images[0]}
                     alt={project.name + " image"}
                   />

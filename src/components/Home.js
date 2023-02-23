@@ -42,9 +42,7 @@ export default function Home() {
 
           <p className="text-2xl font-bold sm:text-3xl">
             <AnimatedWord
-              text={
-                "A fullstack Javascript developer with proficiency in frontend."
-              }
+              text={"A Full-stack MERN developer with proficiency in frontend."}
               className="justify-center md:justify-start"
               viewOnce={true}
             />

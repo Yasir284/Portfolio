@@ -1,8 +1,4 @@
-// Dependencies
-import { motion } from "framer-motion";
-
 // Components and helpers
-import AnimatedWord from "./sub-components/AnimatedWord";
 import skills from "../helpers/skills";
 
 // Images
@@ -13,12 +9,10 @@ export default function Skills() {
   return (
     <section id="skills" className="min-h-screen">
       <div className="mx-auto px-6 py-10 md:px-20">
-        <h2 className="mx-auto w-fit text-4xl font-extrabold">
-          <AnimatedWord text="Skills" viewOnce={true} />
-        </h2>
+        <h2 className="mx-auto w-fit text-4xl font-extrabold">Skills</h2>
         <hr className="mb-4 border-black-700" />
 
-        <motion.div className="flex flex-row flex-wrap items-end justify-center gap-10">
+        <div className="flex flex-row flex-wrap items-end justify-center gap-10">
           {skills.map((skill, index) => (
             <div key={index}>
               <AnimateCards
@@ -41,7 +35,7 @@ export default function Skills() {
           <h2 className="text-2xl">
             <AnimatedLetter text={"More coming soon..."} viewOnce={true} />
           </h2>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
