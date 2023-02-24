@@ -1,3 +1,4 @@
+// Dependencies
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AiFillPlayCircle,
@@ -8,6 +9,7 @@ import AnimatedLetter from "../sub-components/AnimatedLetter";
 import Slider from "../sub-components/Slider";
 import shapes from "../../assets/images/backgrounds/shapes.svg";
 
+// Framer motion animation varitent
 const modalVarient = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
