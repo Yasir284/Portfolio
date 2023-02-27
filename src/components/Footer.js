@@ -16,9 +16,15 @@ export default function Footer() {
       <div className="flex flex-row flex-wrap items-center justify-center md:justify-between">
         <div className="flex flex-row gap-6">
           {socialLinks.map((social, index) => (
-            <a key={index} href={social.link} target="_blank" rel="noreferrer">
+            <a
+              key={index}
+              href={social.link}
+              title={social.name}
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="flex h-10 w-10 items-center justify-center rounded-full shadow-md shadow-black-900 transition-all duration-200 ease-in-out hover:-translate-y-2 hover:scale-110 active:scale-90">
-                <social.icon size="1.5rem" />
+                <social.icon size="1.5rem" title={`${social.name} icon`} />
               </div>
             </a>
           ))}
@@ -30,7 +36,7 @@ export default function Footer() {
               <li
                 onClick={() => getCompInView(document.getElementById(list.id))}
                 key={index}
-                className="cursor-pointer p-2 text-gray-500 transition-all duration-200 ease-in-out hover:text-white active:scale-90"
+                className="cursor-pointer p-2 text-white-300 transition-all duration-200 ease-in-out hover:text-white active:scale-90"
               >
                 {list.name}
               </li>
@@ -38,15 +44,16 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="text-center text-gray-500">© Yasir Lambawala.</div>
+      <div className="text-center text-white-300">© Yasir Lambawala.</div>
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit rounded-full bg-black"
       >
         <TfiArrowCircleUp
+          title="Scroll to top button"
           size="2.2rem"
-          className="text-gray-400 transition-all duration-200 ease-in-out hover:scale-105 hover:text-white"
+          className="text-white-300 transition-all duration-200 ease-in-out hover:scale-105 hover:text-white"
         />
       </button>
     </footer>

@@ -25,10 +25,11 @@ export default function SocialLinks() {
             href={social.link}
             target="_blank"
             rel="noreferrer"
+            title={social.name}
             className="backdrop-blur-sm backdrop-filter"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-full shadow-md shadow-black-900">
-              <social.icon size="1.5rem" />
+              <social.icon size="1.5rem" title={`${social.name} icon`} />
             </div>
           </motion.a>
         ))}

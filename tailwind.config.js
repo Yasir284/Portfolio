@@ -7,6 +7,7 @@ module.exports = {
         "black-900": "#171717",
         "black-800": "#2E2E2E",
         "black-700": "#454545",
+        "white-300": "#BFC3CA",
       },
       fontFamily: {
         Roboto: ["Roboto"],
