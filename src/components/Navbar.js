@@ -32,7 +32,7 @@ export default function Navbar() {
   useEffect(() => {
     const sectionObserver = new IntersectionObserver(
       function (entries) {
-        if (!entries[0].isIntersecting) {
+        if (!entries[0].isIntersecting && window.innerWidth >= 768) {
           document
             .querySelector("nav")
             .classList.add("opacity-0", "hover:opacity-100");
