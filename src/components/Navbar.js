@@ -55,9 +55,7 @@ export default function Navbar() {
           }
         });
       },
-      {
-        root: null,
-      }
+      { root: null, threshold: 0.2 }
     );
 
     document.querySelectorAll("section").forEach((section) => {

@@ -18,17 +18,19 @@ const SocialLinks = lazy(() =>
 
 function App() {
   return (
-    <Suspense fallback={<Loader />}>
-      <ToastContainer position="top-right" autoClose={3000} />
-      <SocialLinks />
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </Suspense>
+    <>
+      <Suspense fallback={<Loader pageLoading={true} />}>
+        <ToastContainer position="top-right" autoClose={3000} />
+        <SocialLinks />
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </Suspense>
+    </>
   );
 }
 
