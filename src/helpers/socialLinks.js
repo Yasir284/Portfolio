@@ -14,7 +14,7 @@ const socialLinks = [
   {
     name: "Linkedin",
     icon: SlSocialLinkedin,
-    link: "https://www.linkedin.com/in/yasir-lambawala-2b216a1b9/",
+    link: "https://www.linkedin.com/in/yasirl/",
     style: "text-[#0A66C2]",
   },
   {
