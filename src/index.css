@@ -67,13 +67,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-/* Navbar item active style */
-.active {
-  background-color: #ffffff;
-  color: #000000;
-  font-weight: 600;
-}
-
 /* Media query */
 @media (min-width: 480px) {
   html {
