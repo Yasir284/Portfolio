@@ -6,8 +6,8 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import mainImage from "../assets/images/header-img.svg";
 
 // Components
-import AnimatedLetter from "./sub-components/AnimatedLetter";
-import AnimatedWord from "./sub-components/AnimatedWord";
+import AnimatedWord1 from "./sub-components/AnimatedWord1";
+import AnimatedWord2 from "./sub-components/AnimatedWord2";
 
 const imageVaritent = {
   animate: { y: [20, -10, 10, -10] },
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="mx-6 mt-10 grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20 md:mt-0">
         <div className="col-span-full flex h-full flex-col items-center justify-start text-4xl font-extrabold sm:mt-0 md:col-span-1 md:items-start md:justify-center">
           <h1 className="mb-4 text-5xl sm:text-7xl">
-            <AnimatedLetter
+            <AnimatedWord2
               text={"Hi, I'am Yasir"}
               className="justify-center sm:justify-start"
               viewOnce={true}
@@ -41,7 +41,7 @@ export default function Home() {
           </h1>
 
           <p className="text-2xl font-bold sm:text-3xl">
-            <AnimatedWord
+            <AnimatedWord1
               text={"A Full-stack MERN developer with proficiency in frontend."}
               className="justify-center md:justify-start"
               viewOnce={true}
@@ -61,7 +61,12 @@ export default function Home() {
           {...imageVaritent}
           className="absolute top-[40%] right-0 left-10 -z-10 col-span-full mx-auto sm:static sm:w-2/3 md:col-span-1 md:w-full"
         >
-          <img src={mainImage} className="w-full" alt="Main page svg" />
+          <img
+            src={mainImage}
+            className="w-full"
+            loading="lazy"
+            alt="Main page svg"
+          />
         </motion.div>
       </div>
     </section>

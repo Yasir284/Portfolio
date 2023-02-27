@@ -31,6 +31,7 @@ export default function Slider({ images }) {
                 className="mx-auto rounded-md"
                 src={img}
                 alt={"image " + index}
+                loading="lazy"
               />
             </div>
           </SwiperSlide>

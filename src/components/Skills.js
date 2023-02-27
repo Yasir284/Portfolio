@@ -23,8 +23,9 @@ export default function Skills() {
                 <h2 className="text-xl font-bold">{skill.name}</h2>
                 <div className="w-24 sm:w-32">
                   <img
-                    className="object-cover"
                     src={skill.src}
+                    className="object-cover"
+                    loading="lazy"
                     alt={skill.name + " image"}
                   />
                 </div>

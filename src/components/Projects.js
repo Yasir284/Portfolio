@@ -115,8 +115,9 @@ export default function Projects() {
               >
                 <div className="relative flex aspect-video w-80 items-center justify-center rounded-md border border-black-700 bg-black-900 shadow-lg shadow-black sm:w-96">
                   <img
-                    className="aspect-video w-full rounded-md object-contain"
                     src={project.images[0]}
+                    className="aspect-video w-full rounded-md object-contain"
+                    loading="lazy"
                     alt={project.name + " image"}
                   />
 
