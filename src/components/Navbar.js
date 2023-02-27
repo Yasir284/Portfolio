@@ -1,5 +1,5 @@
 // Dependencies and react hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 // React icons
@@ -29,21 +29,45 @@ export default function Navbar() {
     });
   }
 
-  window.addEventListener("scroll", function () {
-    let section = document.querySelectorAll("section");
-    let i = 0;
-    while (
-      i < section.length &&
-      section[i]?.getBoundingClientRect().top <= window.innerHeight / 2
-    ) {
-      setActiveListId(section[i].id);
-      i++;
-    }
-  });
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      function (entries) {
+        if (!entries[0].isIntersecting) {
+          document
+            .querySelector("nav")
+            .classList.add("opacity-0", "hover:opacity-100");
+        } else {
+          document
+            .querySelector("nav")
+            .classList.remove("opacity-0", "hover:opacity-100");
+        }
+      },
+      { root: null, threshold: 0.3 }
+    );
+    const sectionOne = document.getElementById("home");
+    sectionObserver.observe(sectionOne);
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveListId(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+      }
+    );
+
+    document.querySelectorAll("section").forEach((section) => {
+      observer.observe(section);
+    });
+  }, []);
 
   return (
     <>
-      <nav className="sticky top-0 right-0 z-20 backdrop-blur-md backdrop-filter">
+      <nav className="sticky top-0 right-0 z-20 backdrop-blur-md backdrop-filter transition-all duration-300 ease-in-out">
         <div className="flex flex-row items-center justify-between border-b border-black-700 py-3 px-6 font-Roboto tracking-widest sm:py-4 md:px-20">
           <div
             onClick={() =>
