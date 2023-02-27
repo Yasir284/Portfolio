@@ -60,7 +60,12 @@ export default function Contact() {
               development!
             </div>
           </div>
-          <img src={contact} alt="contact" className="h-52 p-6 md:h-64" />
+          <img
+            src={contact}
+            className="h-52 p-6 md:h-64"
+            loading="lazy"
+            alt="contact"
+          />
         </div>
 
         {/* Contact form */}
