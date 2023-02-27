@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function SocialLinks() {
   return (
-    <div className="fixed top-0 right-0 mx-2 hidden h-full items-center justify-center sm:flex">
+    <div className="fixed top-0 right-0 z-10 mx-2 hidden h-full items-center justify-center sm:flex">
       <div className="flex flex-col gap-6">
         {socialLinks.map((social, index) => (
           <motion.a
