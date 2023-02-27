@@ -19,7 +19,7 @@ export default function Loader({ pageLoading }) {
           //   Welcome To My Portfolio
           // </motion.h1>
           <div
-            className="glitch text-4xl font-bold"
+            className="glitch text-5xl font-bold"
             data-glitch="Welcome To My Portfolio"
           >
             Welcome To My Portfolio
