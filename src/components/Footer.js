@@ -42,7 +42,7 @@ export default function Footer() {
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit bg-black"
+        className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit rounded-full bg-black"
       >
         <TfiArrowCircleUp
           size="2.2rem"
