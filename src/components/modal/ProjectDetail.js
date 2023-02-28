@@ -26,7 +26,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
           className="fixed top-0 right-0 z-20 flex h-full w-full flex-row items-center justify-center bg-black bg-opacity-20 backdrop-blur-sm backdrop-filter"
         >
           <div
-            className="relative m-4 flex rounded-3xl px-4 py-16 sm:p-16 md:m-0 md:w-[80%]"
+            className="relative m-4 flex rounded-3xl px-4 py-16 sm:p-16 md:mx-10 lg:mx-40 "
             style={{ backgroundImage: `url(${shapes})` }}
           >
             {/* Close button */}
@@ -57,18 +57,18 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                     href={project.liveLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex w-fit flex-row items-center gap-3 rounded-md bg-white bg-opacity-20 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
+                    className="flex w-fit flex-row items-center gap-3 rounded-md bg-red-500 bg-opacity-50 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
                   >
-                    <AiFillPlayCircle size="1.5rem" className="text-red-400" />
+                    <AiFillPlayCircle size="1.5rem" />
                     <p>Live Link</p>
                   </a>
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex w-fit flex-row items-center gap-3 rounded-md bg-white bg-opacity-20 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
+                    className="flex w-fit flex-row items-center gap-3 rounded-md bg-violet-500 bg-opacity-50 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
                   >
-                    <AiFillGithub size="1.5rem" className="text-violet-400" />
+                    <AiFillGithub size="1.5rem" />
                     <p>Github Link</p>
                   </a>
                 </div>

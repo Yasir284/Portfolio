@@ -65,7 +65,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 right-0 z-20 backdrop-blur-md backdrop-filter transition-all duration-300 ease-in-out">
+      <nav className="sticky top-0 right-0 z-20 hidden backdrop-blur-md backdrop-filter transition-all duration-300 ease-in-out md:block md:w-auto">
         <div className="flex flex-row items-center justify-between border-b border-black-700 py-3 px-6 font-Roboto tracking-widest sm:py-4 md:px-20">
           <div
             onClick={() =>
@@ -76,7 +76,7 @@ export default function Navbar() {
             <h1 className="font-Balsamiq text-2xl font-bold">My Portfolio</h1>
           </div>
 
-          <ul className="hidden flex-row items-center gap-6 uppercase md:flex">
+          <ul className="flex flex-row items-center gap-6 uppercase">
             {navItems.map((list) => (
               <li
                 key={list.id}
@@ -89,19 +89,20 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          {/* Hamburger menu button */}
-          <button
-            onClick={() => setActive(!active)}
-            className="block text-white transition-all duration-200 ease-in-out active:scale-75 md:hidden"
-          >
-            {active ? (
-              <GiHamburgerMenu className="text-[1.5rem] sm:text-[2rem]" />
-            ) : (
-              <MdClose className="text-[1.5rem] sm:text-[2rem]" />
-            )}
-          </button>
         </div>
       </nav>
+
+      {/* Hamburger menu button */}
+      <button
+        onClick={() => setActive(!active)}
+        className="fixed right-6 top-4 z-20 rounded-full bg-black bg-opacity-20 text-white shadow-md shadow-black backdrop-blur-sm backdrop-filter transition-all duration-200 ease-in-out active:scale-75 md:hidden"
+      >
+        {active ? (
+          <GiHamburgerMenu className="m-3 text-[1.5rem] sm:text-[2rem]" />
+        ) : (
+          <MdClose className="m-3 text-[1.5rem] sm:text-[2rem]" />
+        )}
+      </button>
 
       {/* Hamburger menu*/}
       <AnimatePresence>

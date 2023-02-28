@@ -29,8 +29,8 @@ export default function Home() {
   }
 
   return (
-    <section id="home" className="relative h-screen bg-fixed font-Balsamiq">
-      <div className="mx-6 mt-10 grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20 md:mt-0">
+    <section id="home" className="h-screen bg-fixed font-Balsamiq">
+      <div className="relative mx-6 mt-[20%] grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20 md:mt-0">
         <div className="col-span-full flex h-full flex-col items-center justify-start text-4xl font-extrabold sm:mt-0 md:col-span-1 md:items-start md:justify-center">
           <h1 className="mb-4 text-5xl sm:text-7xl">
             <AnimatedWord2
@@ -59,7 +59,7 @@ export default function Home() {
 
         <motion.div
           {...imageVaritent}
-          className="absolute top-[40%] right-0 left-10 -z-10 col-span-full mx-auto sm:static sm:w-2/3 md:col-span-1 md:w-full"
+          className="absolute bottom-[30%] right-0 left-10 -z-10 col-span-full mx-auto sm:bottom-[20%] md:static md:col-span-1 md:w-full"
         >
           <img
             src={mainImage}

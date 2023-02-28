@@ -20,15 +20,15 @@ export default function Skills() {
                 index={index}
                 className="flex h-48 w-36 flex-col items-center justify-start gap-4 rounded-lg bg-gradient-to-br from-[rgba(96,63,113,1)] to-[rgba(134,61,97,1)] p-4 uppercase shadow-lg shadow-black sm:h-auto sm:w-48 sm:p-10"
               >
-                <h2 className="text-xl font-bold">{skill.name}</h2>
                 <div className="w-24 sm:w-32">
                   <img
                     src={skill.src}
-                    className="object-cover"
+                    className="w-full object-cover"
                     loading="lazy"
                     alt={skill.name + " image"}
                   />
                 </div>
+                <h2 className="font-bold">{skill.name}</h2>
               </AnimateCards>
             </div>
           ))}
