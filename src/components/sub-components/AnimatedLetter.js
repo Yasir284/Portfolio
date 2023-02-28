@@ -19,12 +19,9 @@ export default function AnimatedLetter({ text, viewOnce, className }) {
   const childVarient = {
     initial: {
       opacity: 0,
-      x: -20,
     },
     animate: {
       opacity: 1,
-      x: 0,
-      transition: { type: "spring", damping: 12, stiffness: 100 },
     },
   };
 
