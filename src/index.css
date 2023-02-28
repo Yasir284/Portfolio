@@ -9,6 +9,9 @@
   outline: 0ch;
 }
 
+html {
+  font-size: 13px;
+}
 body {
   scroll-behavior: smooth;
   background: url(./assets/images/backgrounds/Moon.svg);
@@ -28,6 +31,14 @@ body {
 h1,
 h2 {
   font-family: "Balsamiq Sans";
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Background image */
@@ -68,7 +79,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Glitch Text */
-
 .glitch {
   position: relative;
   line-height: 1.2;
