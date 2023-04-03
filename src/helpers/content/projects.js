@@ -95,7 +95,7 @@ const projects = [
   {
     id: 2,
     category: "Html & Css",
-    name: "Web Developement Template",
+    name: "Restaurant Food Page",
     images: [project2],
     liveLink: "https://project2-25722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-2-Restaurant-Food-Page",
@@ -105,7 +105,7 @@ const projects = [
   {
     id: 3,
     category: "Html & Css",
-    name: "Product Developement Template",
+    name: "Law Home Page",
     images: [project3],
     liveLink: "https://project3-25722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-3-law-Home-Page",
@@ -125,7 +125,7 @@ const projects = [
   {
     id: 5,
     category: "Html & Css",
-    name: "Dance Landing Template",
+    name: "Crypto Landing Template",
     images: [project5],
     liveLink: "https://project5-26722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-5-Crypto-Landing-Page",
@@ -135,7 +135,7 @@ const projects = [
   {
     id: 6,
     category: "Html & Css",
-    name: "Interior Landing Template",
+    name: "Plant Landing Template",
     images: [project6],
     liveLink: "https://project6-26722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-6-Plant-Landing-Page",
@@ -145,7 +145,7 @@ const projects = [
   {
     id: 7,
     category: "Html & Css",
-    name: "Plant Home Template",
+    name: "Product Landing Template",
     images: [project7_1, project7_2],
     liveLink: "https://project7-26722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-7-Product-landing-page",
@@ -155,7 +155,7 @@ const projects = [
   {
     id: 8,
     category: "Html & Css",
-    name: "Crypto Landing Template",
+    name: "Design Landing Template",
     images: [project8_1, project8_2, project8_3],
     liveLink: "https://project8-27722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-8-Design-landing-page",
@@ -165,7 +165,7 @@ const projects = [
   {
     id: 9,
     category: "Html & Css",
-    name: "SEO Landing Template",
+    name: "Developer Landing Template",
     images: [project9_1, project9_2, project9_3, project9_4, project9_5],
     liveLink: "https://project9-27722.netlify.app/",
     githubLink: "https://github.com/Yasir284/Project-9-Developer-Landing-page",
