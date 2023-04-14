@@ -37,6 +37,9 @@ const animateLeft = {
   viewport: { once: true },
 };
 
+const resumeLink =
+  "https://drive.google.com/file/d/1FVh6hVzjhUi8xOrOBrL-tvUv5bs9WjDI/view?usp=share_link";
+
 export default function About() {
   return (
     <section
@@ -64,7 +67,7 @@ export default function About() {
 
               <button>
                 <a
-                  href="https://drive.google.com/file/d/1Y5--CIp58m7ovL8XUR5ywbCV8wRYuLrh/view?usp=share_link"
+                  href={resumeLink}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-4 rounded-full border border-white bg-white px-4 py-2 text-black transition-all duration-200  ease-in-out hover:bg-transparent hover:text-white"
