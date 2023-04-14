@@ -1,10 +1,10 @@
 // Dependencies
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  AiFillPlayCircle,
-  AiFillGithub,
-  AiFillCloseCircle,
-} from "react-icons/ai";
+  FillPlayCircle,
+  FillGitHub,
+  FillCloseCircle,
+} from "../../assets/icons/icons";
 import AnimatedLetter from "../sub-components/AnimatedLetter";
 import Slider from "../sub-components/Slider";
 import shapes from "../../assets/images/backgrounds/shapes.svg";
@@ -34,7 +34,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
               onClick={() => setActiveModal({ active: false, project: "" })}
               className="absolute top-4 right-4 active:scale-90"
             >
-              <AiFillCloseCircle size="2rem" />
+              <FillCloseCircle size="2rem" />
             </button>
 
             <div className="flex flex-col gap-12 md:flex-row md:gap-6">
@@ -59,7 +59,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                     rel="noreferrer"
                     className="flex w-fit flex-row items-center gap-3 rounded-md bg-red-500 bg-opacity-50 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
                   >
-                    <AiFillPlayCircle size="1.5rem" />
+                    <FillPlayCircle size="1.5rem" />
                     <p>Live Link</p>
                   </a>
                   <a
@@ -68,7 +68,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
                     rel="noreferrer"
                     className="flex w-fit flex-row items-center gap-3 rounded-md bg-violet-500 bg-opacity-50 px-4 py-2 font-Balsamiq font-bold backdrop-blur-sm backdrop-filter"
                   >
-                    <AiFillGithub size="1.5rem" />
+                    <FillGitHub size="1.5rem" />
                     <p>Github Link</p>
                   </a>
                 </div>

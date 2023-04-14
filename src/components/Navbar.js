@@ -2,9 +2,8 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-// React icons
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdClose } from "react-icons/md";
+// Icons
+import { Hamburge, Close } from "../assets/icons/icons";
 
 // Helper
 import navItems from "../helpers/navItems";
@@ -98,9 +97,9 @@ export default function Navbar() {
         className="fixed right-6 top-4 z-20 rounded-full bg-black bg-opacity-20 text-white shadow-md shadow-black backdrop-blur-sm backdrop-filter transition-all duration-200 ease-in-out active:scale-75 md:hidden"
       >
         {active ? (
-          <GiHamburgerMenu className="m-3 text-[1.5rem] sm:text-[2rem]" />
+          <Hamburge className="m-3 text-[1.5rem] sm:text-[2rem]" />
         ) : (
-          <MdClose className="m-3 text-[1.5rem] sm:text-[2rem]" />
+          <Close className="m-3 text-[1.5rem] sm:text-[2rem]" />
         )}
       </button>
 

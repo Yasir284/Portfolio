@@ -1,25 +1,21 @@
-import {
-  SlSocialInstagram,
-  SlSocialGithub,
-  SlSocialLinkedin,
-} from "react-icons/sl";
+import { Instagram, GitHub, Linkedin } from "../assets/icons/icons";
 
 const socialLinks = [
   {
-    name: "Github",
-    icon: SlSocialGithub,
+    name: "GitHub",
+    icon: GitHub,
     link: "https://github.com/Yasir284",
     style: "text-violet-800",
   },
   {
     name: "Linkedin",
-    icon: SlSocialLinkedin,
+    icon: Linkedin,
     link: "https://www.linkedin.com/in/yasirl/",
     style: "text-[#0A66C2]",
   },
   {
     name: "Instagram",
-    icon: SlSocialInstagram,
+    icon: Instagram,
     link: "https://www.instagram.com/web_dev_yasir/",
     style: "text-[#D62976]",
   },

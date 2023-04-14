@@ -1,6 +1,6 @@
 import navItems from "../helpers/navItems";
 import socialLinks from "../helpers/socialLinks";
-import { TfiArrowCircleUp } from "react-icons/tfi";
+import { ArrowCircleUp } from "../assets/icons/icons";
 
 export default function Footer() {
   function getCompInView(component) {
@@ -47,11 +47,11 @@ export default function Footer() {
       <div className="text-center text-white-300">© Yasir Lambawala.</div>
 
       <button
+        title="Scroll to top button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit rounded-full bg-black"
       >
-        <TfiArrowCircleUp
-          title="Scroll to top button"
+        <ArrowCircleUp
           size="2.2rem"
           className="text-white-300 transition-all duration-200 ease-in-out hover:scale-105 hover:text-white"
         />

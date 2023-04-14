@@ -1,6 +1,8 @@
 // Dependencies
 import { motion } from "framer-motion";
-import { FaAngleDoubleDown } from "react-icons/fa";
+
+// Icons
+import { ArrowDownwords } from "../assets/icons/icons";
 
 // Images
 import mainImage from "../assets/images/header-img.svg";
@@ -53,13 +55,13 @@ export default function Home() {
             className="mt-10 flex items-center justify-center gap-4 rounded-full border border-white bg-white py-2 px-4 text-black transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white"
           >
             <p className="text-lg">Know more about me</p>
-            <FaAngleDoubleDown size="1.5rem" className="animate-pulse" />
+            <ArrowDownwords size="1.5rem" className="animate-pulse" />
           </button>
         </div>
 
         <motion.div
-          {...imageVaritent}
-          className="absolute bottom-[30%] right-0 left-10 -z-10 col-span-full mx-auto sm:bottom-[20%] md:static md:col-span-1 md:w-full"
+          // {...imageVaritent}
+          className="float-animation absolute bottom-[30%] right-0 left-10 -z-10 col-span-full mx-auto sm:bottom-[20%] md:static md:col-span-1 md:w-full"
         >
           <img
             src={mainImage}

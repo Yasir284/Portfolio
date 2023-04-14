@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GiClick } from "react-icons/gi";
+import { Click } from "../assets/icons/icons";
 import { AnimatePresence, motion } from "framer-motion";
 
 // Components and helpers
@@ -126,7 +126,7 @@ export default function Projects() {
                       className="absolute top-0 right-0 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
                     >
                       <p className="text-xl font-bold">Click to know more</p>
-                      <GiClick size="2rem" className="animate-ping" />
+                      <Click size="2rem" className="animate-ping" />
                     </div>
                   </div>
 

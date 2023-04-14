@@ -1,8 +1,8 @@
 // Dependencies
 import { motion } from "framer-motion";
 
-// React icons
-import { HiOutlineDownload } from "react-icons/hi";
+//  Icons
+import { Download } from "../assets/icons/icons";
 
 // Components and helpers
 import qualifications from "../helpers/content/qualification";
@@ -73,7 +73,7 @@ export default function About() {
                   className="flex items-center justify-center gap-4 rounded-full border border-white bg-white px-4 py-2 text-black transition-all duration-200  ease-in-out hover:bg-transparent hover:text-white"
                 >
                   Resume
-                  <HiOutlineDownload size="1.5rem" />
+                  <Download size="1.2rem" />
                 </a>
               </button>
             </div>

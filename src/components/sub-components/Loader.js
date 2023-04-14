@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 
 // React Icons
-import { ImSpinner2 } from "react-icons/im";
+import { Spinner } from "../../assets/icons/icons";
 
 export default function Loader({ pageLoading }) {
   return (
@@ -25,7 +25,7 @@ export default function Loader({ pageLoading }) {
             Welcome To My Portfolio
           </div>
         )}
-        <ImSpinner2
+        <Spinner
           className="animate-spin transition-all duration-200 ease-in-out"
           size="2rem"
         />
