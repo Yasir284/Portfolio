@@ -11,15 +11,15 @@ import mainImage from "../assets/images/header-img.svg";
 import AnimatedWord1 from "./sub-components/AnimatedWord1";
 import AnimatedWord2 from "./sub-components/AnimatedWord2";
 
-const imageVaritent = {
-  animate: { y: [20, -10, 10, -10] },
-  transition: {
-    repeat: Infinity,
-    ease: "easeInOut",
-    repeatType: "mirror",
-    duration: 5,
-  },
-};
+// const imageVaritent = {
+//   animate: { y: [20, -10, 10, -10] },
+//   transition: {
+//     repeat: Infinity,
+//     ease: "easeInOut",
+//     repeatType: "mirror",
+//     duration: 5,
+//   },
+// };
 
 export default function Home() {
   function getCompInView(component) {
@@ -59,9 +59,9 @@ export default function Home() {
           </button>
         </div>
 
-        <motion.div
+        <div
           // {...imageVaritent}
-          className="float-animation absolute bottom-[30%] right-0 left-10 -z-10 col-span-full mx-auto sm:bottom-[20%] md:static md:col-span-1 md:w-full"
+          className="absolute bottom-[30%] right-0 left-10 -z-10 col-span-full mx-auto flex justify-center sm:bottom-[20%] md:static md:col-span-1 md:h-full md:w-full"
         >
           <img
             src={mainImage}
@@ -69,7 +69,7 @@ export default function Home() {
             loading="lazy"
             alt="Main page svg"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
