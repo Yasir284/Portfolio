@@ -1,6 +1,3 @@
-// Dependencies
-import { motion } from "framer-motion";
-
 // Icons
 import { ArrowDownwords } from "../assets/icons/icons";
 
@@ -61,11 +58,11 @@ export default function Home() {
 
         <div
           // {...imageVaritent}
-          className="absolute bottom-[30%] right-0 left-10 -z-10 col-span-full mx-auto flex justify-center sm:bottom-[20%] md:static md:col-span-1 md:h-full md:w-full"
+          className="absolute top-[5%] right-0 left-10 -z-10 col-span-full mx-auto flex h-full w-full justify-center sm:top-[10%] sm:bottom-[20%] md:static md:col-span-1"
         >
           <img
             src={mainImage}
-            className="w-full"
+            className="w-[80%] md:w-full"
             loading="lazy"
             alt="Main page svg"
           />
