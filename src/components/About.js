@@ -45,9 +45,9 @@ export default function About() {
             className="flex basis-[30%] flex-col-reverse items-center gap-6 sm:flex-col"
           >
             <div className="flex flex-col items-center gap-6">
-              <motion.div className="float-animation h-52 w-36 overflow-hidden rounded-3xl bg-black-800 shadow-lg shadow-black-800 md:h-64 md:w-48">
+              <div className="h-52 w-36 overflow-hidden rounded-3xl bg-black-800 shadow-lg shadow-black-800 md:h-64 md:w-48">
                 <img src={myImage} loading="lazy" alt="Yasir" />
-              </motion.div>
+              </div>
 
               <button>
                 <a

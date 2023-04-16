@@ -349,7 +349,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* float-animation */
-.float-animation {
+/* .float-animation {
   animation: float ease-in-out 10s alternate-reverse infinite;
 }
 
@@ -369,4 +369,4 @@ body::-webkit-scrollbar-thumb {
   100% {
     transform: translateY(0);
   }
-}
+} */
