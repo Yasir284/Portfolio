@@ -44,9 +44,7 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
 
               <div className="flex flex-col justify-center gap-4">
                 {/* Name */}
-                <h2 className="text-3xl font-extrabold">
-                  <AnimatedLetter text={project.name} />
-                </h2>
+                <h2 className="text-3xl font-extrabold">{project.name}</h2>
 
                 {/* Description */}
                 <p>{project.description}</p>

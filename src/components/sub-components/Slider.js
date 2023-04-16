@@ -19,7 +19,7 @@ export default function Slider({ images }) {
       autoplay={{ delay: 5000 }}
       pagination={images?.length > 1 ? { clickable: true } : false}
       keyboard={{ enabled: true }}
-      navigation={images?.length > 1 ? true : false}
+      // navigation={images?.length > 1 ? true : false}
       modules={[EffectCube, Pagination, Navigation, Autoplay]}
       className="w-80 rounded-md bg-transparent sm:w-96"
     >

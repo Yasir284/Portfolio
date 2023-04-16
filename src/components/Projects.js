@@ -79,9 +79,7 @@ export default function Projects() {
   return (
     <section id="projects" className="custom-bg min-h-screen py-10">
       <div className="px-6 md:px-20">
-        <h2 className="mx-auto w-fit font-Balsamiq text-4xl font-extrabold">
-          Projects
-        </h2>
+        <h2 className="mx-auto w-fit text-4xl">Projects</h2>
         <hr className="mb-4 border-black-700" />
 
         {/* Project category list */}
