@@ -8,6 +8,7 @@ import { Download } from "../assets/icons/icons";
 import qualifications from "../helpers/content/qualification";
 
 // Images
+import mountain from "../assets/images/backgrounds/mountain.svg";
 import myImage from "../assets/images/my-image.png";
 import aboutMe from "../helpers/content/aboutMe";
 
@@ -70,11 +71,11 @@ export default function About() {
             {...animateLeft}
             className="relative col-span-12 ml-6 basis-[70%] sm:col-span-9"
           >
-            <div className="relative col-span-12 space-y-12 before:absolute before:top-2 before:bottom-0 before:-left-[23px] before:w-0.5 before:bg-white sm:col-span-8 sm:space-y-8">
+            <div className="relative col-span-12 space-y-12 before:absolute before:top-2 before:bottom-0 before:-left-[23px] before:w-0.5 before:bg-gray-400 sm:col-span-8 sm:space-y-8">
               {qualifications.map((data, index) => (
                 <div
                   key={index}
-                  className="relative flex flex-col before:absolute before:top-2 before:left-[-30px] before:z-[1] before:h-4 before:w-4 before:rounded-full before:bg-violet-400 sm:pb-6"
+                  className="relative flex flex-col before:absolute before:top-2 before:left-[-30px] before:z-[1] before:h-4 before:w-4 before:rounded-full before:bg-white sm:pb-6"
                 >
                   <h3 className="text-xl font-semibold tracking-wide">
                     {data.qualification}

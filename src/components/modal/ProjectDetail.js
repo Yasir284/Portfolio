@@ -5,9 +5,9 @@ import {
   FillGitHub,
   FillCloseCircle,
 } from "../../assets/icons/icons";
-import AnimatedLetter from "../sub-components/AnimatedLetter";
 import Slider from "../sub-components/Slider";
-import shapes from "../../assets/images/backgrounds/shapes.svg";
+import mountain from "../../assets/images/backgrounds/mountain.svg";
+import moon from "../../assets/images/backgrounds/Moon.svg";
 
 // Framer motion animation varitent
 const modalVarient = {
@@ -26,8 +26,10 @@ export default function ProjectDetail({ project, active, setActiveModal }) {
           className="fixed top-0 right-0 z-20 flex h-full w-full flex-row items-center justify-center bg-black bg-opacity-20 backdrop-blur-sm backdrop-filter"
         >
           <div
-            className="relative m-4 flex rounded-3xl px-4 py-16 sm:p-16 md:mx-10 lg:mx-40 "
-            style={{ backgroundImage: `url(${shapes})` }}
+            className="relative m-4 flex rounded-3xl px-4 py-16 sm:p-16 md:mx-10 lg:mx-40"
+            style={{
+              background: `linear-gradient(rgb(225,225,225,0.1),rgb(225,225,225,0.1)),bottom / contain no-repeat url(${mountain}), top / cover no-repeat url(${moon})`,
+            }}
           >
             {/* Close button */}
             <button

@@ -80,7 +80,7 @@ export default function Projects() {
     <section id="projects" className="custom-bg min-h-screen py-10">
       <div className="px-6 md:px-20">
         <h2 className="mx-auto w-fit text-4xl">Projects</h2>
-        <hr className="mb-4 border-black-700" />
+        <hr className="mb-12 border-black-700" />
 
         {/* Project category list */}
         <ul className="flex flex-row flex-wrap items-center justify-center gap-x-4 rounded-md md:mx-auto md:w-fit md:gap-0 md:shadow-inner md:shadow-black-800">
@@ -100,12 +100,12 @@ export default function Projects() {
         </ul>
 
         {/* Projects */}
-        <div className="myScrollbar mx-auto mt-4 flex h-[90vh] flex-row flex-wrap justify-center gap-8 overflow-y-scroll rounded-md py-4 transition-all ease-in-out sm:py-12 md:w-[86vw]">
-          {projects
-            .filter((e) => e.category === category)
-            .reverse()
-            .map((project) => (
-              <AnimatePresence mode="wait" key={project.id}>
+        <AnimatePresence mode="wait">
+          <div className="myScrollbar mx-auto mt-4 flex flex-row justify-center gap-8 overflow-x-auto rounded-md py-4 transition-all ease-in-out sm:py-12 md:w-[86vw]">
+            {projects
+              .filter((e) => e.category === category)
+              .reverse()
+              .map((project) => (
                 <motion.div
                   {...cardVarient}
                   layout="position"
@@ -135,9 +135,9 @@ export default function Projects() {
                     {project.name}
                   </motion.h2>
                 </motion.div>
-              </AnimatePresence>
-            ))}
-        </div>
+              ))}
+          </div>
+        </AnimatePresence>
       </div>
 
       <ProjectDetail

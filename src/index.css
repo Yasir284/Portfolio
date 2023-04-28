@@ -57,6 +57,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background-color: transparent;
+  border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -65,12 +66,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .myScrollbar::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
-
 .myScrollbar::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: #666 1px solid;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
