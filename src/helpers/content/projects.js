@@ -65,7 +65,7 @@ import reactPortfolio_1 from "../../assets/images/projects/react-portfolio/img1.
 import reactPortfolio_2 from "../../assets/images/projects/react-portfolio/img2.png";
 import reactPortfolio_3 from "../../assets/images/projects/react-portfolio/img3.png";
 import reactPortfolio_4 from "../../assets/images/projects/react-portfolio/img4.png";
-import reactPortfolio_5 from "../../assets/images/projects/react-portfolio/img6.png";
+import reactPortfolio_5 from "../../assets/images/projects/react-portfolio/img5.png";
 import ticTacToe from "../../assets/images/projects/tic-tac-toe.png";
 import reactShoppingCart_1 from "../../assets/images/projects/react-shopping-cart/img1.png";
 import reactShoppingCart_2 from "../../assets/images/projects/react-shopping-cart/img2.png";
@@ -346,7 +346,7 @@ const projects = [
       reactPortfolio_4,
       reactPortfolio_5,
     ],
-    liveLink: "",
+    liveLink: "https://react-app-practice-yasir.netlify.app/",
     githubLink: "https://github.com/Yasir284/React-practice",
     description:
       "This is the first project that I made using react. It is a demo portfolio website.",
