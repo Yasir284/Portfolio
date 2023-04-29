@@ -8,7 +8,6 @@ import { Download } from "../assets/icons/icons";
 import qualifications from "../helpers/content/qualification";
 
 // Images
-import mountain from "../assets/images/backgrounds/mountain.svg";
 import myImage from "../assets/images/my-image.png";
 import aboutMe from "../helpers/content/aboutMe";
 

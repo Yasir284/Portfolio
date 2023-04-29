@@ -66,8 +66,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .myScrollbar::-webkit-scrollbar {
-  width: 5px;
+  height: 7px;
 }
+
 .myScrollbar::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;

@@ -101,13 +101,14 @@ export default function Projects() {
 
         {/* Projects */}
         <AnimatePresence mode="wait">
-          <div className="myScrollbar mx-auto mt-4 flex flex-row justify-center gap-8 overflow-x-auto rounded-md py-4 transition-all ease-in-out sm:py-12 md:w-[86vw]">
+          <div className="myScrollbar mt-4 flex flex-shrink-0 flex-row justify-center gap-8 overflow-x-auto rounded-md py-4 transition-all ease-in-out sm:py-12 md:w-[86vw]">
             {projects
               .filter((e) => e.category === category)
               .reverse()
-              .map((project) => (
+              .map((project, index) => (
                 <motion.div
                   {...cardVarient}
+                  key={index}
                   layout="position"
                   className="group flex h-fit flex-col items-center gap-6 rounded-md active:scale-90"
                 >

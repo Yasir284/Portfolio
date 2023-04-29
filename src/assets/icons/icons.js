@@ -13,8 +13,8 @@ export const Download = ({ size = "1em", className }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
       ></path>
     </svg>
@@ -28,7 +28,7 @@ export const ArrowDownwords = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 320 512"
       height={size}
       width={size}
@@ -46,7 +46,7 @@ export const ArrowCircleUp = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       version="1.1"
       viewBox="0 0 17 17"
       height={size}
@@ -66,7 +66,7 @@ export const Hamburge = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 512 512"
       height={size}
       width={size}
@@ -84,7 +84,7 @@ export const Click = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 512 512"
       height={size}
       width={size}
@@ -102,7 +102,7 @@ export const FillPlayCircle = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       height={size}
       width={size}
@@ -120,7 +120,7 @@ export const FillGitHub = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       height={size}
       width={size}
@@ -138,7 +138,7 @@ export const FillCloseCircle = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       height={size}
       width={size}
@@ -156,7 +156,7 @@ export const Spinner = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       version="1.1"
       viewBox="0 0 16 16"
       height={size}
@@ -175,7 +175,7 @@ export const Instagram = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       height={size}
       width={size}
@@ -193,7 +193,7 @@ export const GitHub = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       height={size}
       width={size}
@@ -211,7 +211,7 @@ export const Linkedin = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       height={size}
       width={size}
@@ -229,7 +229,7 @@ export const Close = ({ size = "1em", className }) => {
       className={className ? className : ""}
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 24 24"
       height={size}
       width={size}

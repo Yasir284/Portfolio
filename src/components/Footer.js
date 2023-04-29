@@ -1,6 +1,7 @@
 import navItems from "../helpers/navItems";
 import socialLinks from "../helpers/socialLinks";
 import { ArrowCircleUp } from "../assets/icons/icons";
+import mountain from "../assets/images/backgrounds/mountain.svg";
 
 export default function Footer() {
   function getCompInView(component) {
@@ -12,7 +13,12 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative flex flex-col gap-2 border-t border-black-700 bg-black-900 py-4 px-6 md:px-20">
+    <footer className="relative flex flex-col gap-2 border-t border-black-700 py-4 px-6 md:px-20">
+      <img
+        src={mountain}
+        alt="mountain background"
+        className="absolute bottom-0 left-0 right-0 -z-10"
+      />
       <div className="flex flex-row flex-wrap items-center justify-center md:justify-between">
         <div className="flex flex-row gap-6">
           {socialLinks.map((social, index) => (
@@ -49,10 +55,10 @@ export default function Footer() {
       <button
         title="Scroll to top button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit rounded-full bg-black"
+        className="absolute -top-4 left-0 right-0 z-10 mx-auto w-fit animate-pulse rounded-full bg-black hover:animate-none"
       >
         <ArrowCircleUp
-          size="2.2rem"
+          size="2.5rem"
           className="text-white-300 transition-all duration-200 ease-in-out hover:scale-105 hover:text-white"
         />
       </button>
