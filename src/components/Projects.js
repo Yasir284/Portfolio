@@ -157,22 +157,26 @@ export default function Projects() {
               ))}
           </motion.div>
         </AnimatePresence>
+        {(window.innerWidth < 1379 ||
+          projects.filter((e) => e.category === category).length > 3) && (
+          <>
+            {/* Previous button */}
+            <button
+              onClick={slidePrev}
+              className="absolute top-[48%] left-[5%] aspect-square h-fit w-fit rounded-full border-2 bg-black bg-opacity-10 p-2 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
+            >
+              <ArrowLeft size="1.5rem" />
+            </button>
 
-        {/* Previous button */}
-        <button
-          onClick={slidePrev}
-          className="absolute top-[48%] left-[5%] aspect-square h-fit w-fit rounded-full border-2 bg-black bg-opacity-10 p-2 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
-        >
-          <ArrowLeft size="1.5rem" />
-        </button>
-
-        {/* Next button */}
-        <button
-          onClick={slideNext}
-          className="absolute top-[48%] right-[5%] aspect-square h-fit w-fit rounded-full border-2 bg-black bg-opacity-10 p-2 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
-        >
-          <ArrowRight size="1.5rem" />
-        </button>
+            {/* Next button */}
+            <button
+              onClick={slideNext}
+              className="absolute top-[48%] right-[5%] aspect-square h-fit w-fit rounded-full border-2 bg-black bg-opacity-10 p-2 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
+            >
+              <ArrowRight size="1.5rem" />
+            </button>
+          </>
+        )}
       </div>
 
       <ProjectDetail
