@@ -13,7 +13,6 @@ html {
   font-size: 13px;
 }
 body {
-  scroll-behavior: smooth;
   background: url(./assets/images/backgrounds/Moon.svg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -66,7 +65,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .myScrollbar::-webkit-scrollbar {
-  height: 7px;
+  height: 9px;
+  cursor: grabbing;
 }
 
 .myScrollbar::-webkit-scrollbar-track {
