@@ -88,7 +88,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="custom-bg min-h-screen py-10">
+    <section id="projects" className="custom-bg relative min-h-screen py-10">
       <div className="px-6 md:px-20">
         <h2 className="mx-auto w-fit text-4xl">Projects</h2>
         <hr className="mb-12 border-black-700" />
@@ -110,73 +110,69 @@ export default function Projects() {
           ))}
         </ul>
 
-        <div className="flex flex-row items-center gap-2">
-          {/* Previous button */}
-          <button
-            onClick={slidePrev}
-            className="group aspect-square h-fit w-fit rounded-full border px-1 opacity-70 transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
+        {/* Projects */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            ref={sliderRef}
+            // onWheel={(e) => {
+            //   e.preventDefault();
+            //   sliderRef.current.scrollLeft += e.deltaY;
+            // }}
+            className="myScrollbar mx-auto mt-4 flex flex-shrink-0 snap-x snap-mandatory flex-row items-center gap-8 overflow-x-auto scroll-smooth rounded-md py-4 transition-all duration-500 ease-in-out sm:py-12"
           >
-            <ArrowLeft size="1.5rem" />
-          </button>
+            {projects
+              .filter((e) => e.category === category)
+              .reverse()
+              .map((project) => (
+                <motion.div
+                  {...cardVarient}
+                  key={project.id}
+                  layout="position"
+                  className="group flex h-fit snap-start flex-col items-center gap-6 rounded-md active:scale-90"
+                >
+                  <div className="relative flex aspect-video w-80 items-center justify-center rounded-md border border-black-700 bg-black bg-opacity-25 shadow-lg shadow-black backdrop-blur-sm backdrop-filter sm:w-96">
+                    <img
+                      src={project.images[0]}
+                      className="aspect-video w-full rounded-md object-contain"
+                      loading="lazy"
+                      alt={project.name + " image"}
+                    />
 
-          {/* Projects */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              ref={sliderRef}
-              // onWheel={(e) => {
-              //   e.preventDefault();
-              //   sliderRef.current.scrollLeft += e.deltaY;
-              // }}
-              className="myScrollbar mx-auto mt-4 flex flex-shrink-0 snap-x snap-mandatory flex-row gap-8 overflow-x-auto scroll-smooth rounded-md py-4 transition-all duration-500 ease-in-out sm:py-12 md:w-[96%]"
-            >
-              {projects
-                .filter((e) => e.category === category)
-                .reverse()
-                .map((project) => (
-                  <motion.div
-                    {...cardVarient}
-                    key={project.id}
-                    layout="position"
-                    className="group flex h-fit snap-start flex-col items-center gap-6 rounded-md active:scale-90"
-                  >
-                    <div className="relative flex aspect-video w-80 items-center justify-center rounded-md border border-black-700 bg-black bg-opacity-25 shadow-lg shadow-black backdrop-blur-sm backdrop-filter sm:w-96">
-                      <img
-                        src={project.images[0]}
-                        className="aspect-video w-full rounded-md object-contain"
-                        loading="lazy"
-                        alt={project.name + " image"}
-                      />
-
-                      <div
-                        onClick={() =>
-                          setActiveModal({ active: true, project })
-                        }
-                        className="absolute top-0 right-0 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
-                      >
-                        <p className="text-xl font-bold">Click to know more</p>
-                        <Click size="2rem" className="animate-ping" />
-                      </div>
-                    </div>
-
-                    <motion.h2
-                      {...textVarient}
-                      className="w-fit border-b border-black-700 text-center text-2xl font-bold"
+                    <div
+                      onClick={() => setActiveModal({ active: true, project })}
+                      className="absolute top-0 right-0 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-md bg-black bg-opacity-30 opacity-0 shadow-inner shadow-black-700 backdrop-blur-sm backdrop-filter transition-all duration-300 ease-in-out group-hover:opacity-100"
                     >
-                      {project.name}
-                    </motion.h2>
-                  </motion.div>
-                ))}
-            </motion.div>
-          </AnimatePresence>
+                      <p className="text-xl font-bold">Click to know more</p>
+                      <Click size="2rem" className="animate-ping" />
+                    </div>
+                  </div>
 
-          {/* Next button */}
-          <button
-            onClick={slideNext}
-            className="group aspect-square h-fit w-fit rounded-full border px-1 opacity-70  transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
-          >
-            <ArrowRight size="1.5rem" />
-          </button>
-        </div>
+                  <motion.h2
+                    {...textVarient}
+                    className="w-fit border-b border-black-700 text-center text-2xl font-bold"
+                  >
+                    {project.name}
+                  </motion.h2>
+                </motion.div>
+              ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Previous button */}
+        <button
+          onClick={slidePrev}
+          className="absolute top-[48%] left-[5%] aspect-square h-fit w-fit rounded-full border-2 bg-black bg-opacity-10 p-2 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
+        >
+          <ArrowLeft size="1.5rem" />
+        </button>
+
+        {/* Next button */}
+        <button
+          onClick={slideNext}
+          className="absolute top-[48%] right-[5%] aspect-square h-fit w-fit rounded-full border-2 bg-black bg-opacity-10 p-2 backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-100 active:scale-75"
+        >
+          <ArrowRight size="1.5rem" />
+        </button>
       </div>
 
       <ProjectDetail
