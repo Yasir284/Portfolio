@@ -29,28 +29,19 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    const sectionObserver = new IntersectionObserver(
-      function (entries) {
-        if (!entries[0].isIntersecting && window.innerWidth >= 768) {
-          document
-            .querySelector("nav")
-            .classList.add("opacity-0", "hover:opacity-100");
-        } else {
-          document
-            .querySelector("nav")
-            .classList.remove("opacity-0", "hover:opacity-100");
-        }
-      },
-      { root: null, threshold: 0.3 }
-    );
-    const sectionOne = document.getElementById("home");
-    sectionObserver.observe(sectionOne);
-
     const observer = new IntersectionObserver(
       function (entries) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveListId(entry.target.id);
+          }
+
+          if (window.innerWidth >= 768 && entry.target.id === "home") {
+            const navbar = document.querySelector("nav");
+
+            entry.isIntersecting
+              ? navbar.classList.remove("opacity-0", "hover:opacity-100")
+              : navbar.classList.add("opacity-0", "hover:opacity-100");
           }
         });
       },
