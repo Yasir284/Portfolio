@@ -28,9 +28,9 @@ export default function Home() {
   }
 
   return (
-    <section id="home" className="h-screen bg-fixed">
-      <div className="relative mx-6 mt-[20%] grid h-full grid-cols-2 items-start justify-between sm:items-center md:mx-20 md:mt-0">
-        <div className="col-span-full flex h-full flex-col items-center justify-start text-4xl font-bold sm:mt-0 md:col-span-1 md:items-start md:justify-center">
+    <section id="home" className="h-[70vh] bg-fixed md:h-screen">
+      <div className="relative mx-6 mt-[20%] grid h-full grid-cols-2 items-start justify-start sm:items-center md:mx-20 md:mt-0">
+        <div className="col-span-full flex flex-col items-center justify-start text-4xl font-bold sm:mt-0 md:col-span-1 md:items-start md:justify-center">
           <p className="mb-2">Hi there, 👋</p>
           <h1 className="my-4 text-5xl sm:text-6xl">
             <AnimatedWord2
@@ -59,7 +59,7 @@ export default function Home() {
 
         <div
           // {...imageVaritent}
-          className="absolute top-[5%] right-0 left-10 -z-10 col-span-full mx-auto flex h-full w-full justify-center sm:top-[10%] sm:bottom-[20%] md:static md:col-span-1"
+          className="col-span-full mx-auto flex h-full w-full justify-center md:col-span-1"
         >
           <img
             src={mainImage}

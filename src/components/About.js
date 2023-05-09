@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="custom-bg min-h-screen overflow-hidden py-10 px-6 md:px-20"
+      className="custom-bg overflow-hidden py-10 px-6 md:min-h-screen md:px-20"
     >
       <div className="flex flex-col gap-6">
         <h2 className="text-center text-4xl font-extrabold">
