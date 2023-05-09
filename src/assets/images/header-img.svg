@@ -739,7 +739,7 @@
 </clipPath>
 <style>
 #float {
-  animation: float ease-in-out 10s alternate-reverse infinite;
+  animation: float ease-in-out 10s alternate-reverse infinite, enter ease-in-out 1s;
 }
 
 @keyframes float {
@@ -758,6 +758,15 @@
   100% {
     transform: translateY(0);
   }
+}
+
+@keyframes enter{
+0%{
+opacity:0
+}
+100%{
+opacity:1
+}
 }
 
 </style>
